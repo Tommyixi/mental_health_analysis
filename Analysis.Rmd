@@ -1,0 +1,14 @@
+---
+title: "Analysis Mental Health Survey"
+author: ''
+date: "December 5, 2016"
+output: pdf_document
+---
+
+```{r}
+#setwd("/Users/linamontoya/Box Sync/Mental health survey")
+MH = read.csv("data.csv")
+
+MH_respond = MH[!is.na(MH$intro == 1),]
+
+```
