@@ -1,14 +1,30 @@
 ---
 title: "Analysis Mental Health Survey"
-author: ''
+author: 'Tommy and Lina'
 date: "December 5, 2016"
 output: pdf_document
 ---
 
-```{r}
-#setwd("/Users/linamontoya/Box Sync/Mental health survey")
-MH = read.csv("data.csv")
+```{r, results = 'asis', echo = FALSE}
+library(knitr)
+
+MH = read.csv("Data/data.csv")
+
+# General living
+genliving = MH[,grep("^a", names(MH))]
+genliving_tabs = apply(genliving, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+names(genliving_tabs) = c("Life & Living conditions: The conditions of my life are excellent", "Life & Living conditions: I am satisfied with my life", "Life & Living conditions: I am satisfied with my living conditions", "Life & Living conditions: Where I live, I feel safe", "Health rating: Physical Health", "Health rating: Mental Health", "Financial: Confidence in financial situation", "Financial: Often cut back on important spending", "Financial: I have been concerned about money lately", "Aspects of Life: Academic life", "Aspects of Life: Social life", "Aspects of Life: Residential life")
+lapply(genliving_tabs, kable)
+
+aclife = MH[,grep("^b", names(MH))]
+aclife_tabs = apply(aclife, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+#names(aclife_tabs) = c("I felt anxious")
+lapply(aclife_tabs, kable)
+
+
+names(MH[,grep("([a-z])$", names(MH))])
+
+
 
 MH_respond = MH[!is.na(MH$intro == 1),]
-
 ```
