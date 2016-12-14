@@ -5,7 +5,12 @@ date: "December 5, 2016"
 output: pdf_document
 ---
 
-```{r, results = 'asis', echo = FALSE}
+We ultimately want to be able to make conclusions like "X percent of students agree with this statement" and "X number of students in [demographic group] believe that..."  
+Section 1 - descriptive stats
+Section 2 - inference
+Section 3 - answers to questions Raj has
+
+```{r, results = 'asis', echo = FALSE, warning = FALSE}
 library(knitr)
 
 MH = read.csv("Data/data.csv")
@@ -13,18 +18,22 @@ MH = read.csv("Data/data.csv")
 # General living
 genliving = MH[,grep("^a", names(MH))]
 genliving_tabs = apply(genliving, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
-names(genliving_tabs) = c("Life & Living conditions: The conditions of my life are excellent", "Life & Living conditions: I am satisfied with my life", "Life & Living conditions: I am satisfied with my living conditions", "Life & Living conditions: Where I live, I feel safe", "Health rating: Physical Health", "Health rating: Mental Health", "Financial: Confidence in financial situation", "Financial: Often cut back on important spending", "Financial: I have been concerned about money lately", "Aspects of Life: Academic life", "Aspects of Life: Social life", "Aspects of Life: Residential life")
+genliving_chisq = apply(genliving, 2, function(x) chisq.test(table(x, MH$ethn_level2))$p.value)
+names(genliving_tabs) = names(genliving_chisq) = c("Life & Living conditions: The conditions of my life are excellent", "Life & Living conditions: I am satisfied with my life", "Life & Living conditions: I am satisfied with my living conditions", "Life & Living conditions: Where I live, I feel safe", "Health rating: Physical Health", "Health rating: Mental Health", "Financial: Confidence in financial situation", "Financial: Often cut back on important spending", "Financial: I have been concerned about money lately", "Aspects of Life: Academic life", "Aspects of Life: Social life", "Aspects of Life: Residential life")
 lapply(genliving_tabs, kable)
 
+
+# Academic life
 aclife = MH[,grep("^b", names(MH))]
 aclife_tabs = apply(aclife, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
 #names(aclife_tabs) = c("I felt anxious")
 lapply(aclife_tabs, kable)
 
 
+
+
+
+
 names(MH[,grep("([a-z])$", names(MH))])
-
-
 MH_respond = MH[!is.na(MH$intro == 1),]
-x = 2
 ```
