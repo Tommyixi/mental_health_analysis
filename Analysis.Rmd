@@ -5,10 +5,23 @@ date: "December 5, 2016"
 output: pdf_document
 ---
 
+# UC Berkeley Demographic Analysis
+
 ```{r, results = 'asis', echo = FALSE}
 library(knitr)
+options(knitr.kable.NA = '')
 
-MH = read.csv("Data/data.csv")
+
+berkeley_data = read.csv("berkeley_data.csv", header=TRUE, sep=',')
+kable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,])
+
+```
+* Note, underrepresented groups are  defined as African American, Chicano/Latino, and Native American/Alaska Native.
+
+# Survey Analysis
+```{r, results = 'asis', echo = FALSE}
+
+MH = read.csv("../data.csv")
 
 # General living
 genliving = MH[,grep("^a", names(MH))]
