@@ -5,23 +5,60 @@ date: "December 5, 2016"
 output: pdf_document
 ---
 
-# UC Berkeley Demographic Analysis
-
+# UC Berkeley Demographic
 ```{r, results = 'asis', echo = FALSE}
 library(knitr)
-options(knitr.kable.NA = '')
-
 
 berkeley_data = read.csv("berkeley_data.csv", header=TRUE, sep=',')
 kable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,])
-
 ```
-* Note, underrepresented groups are  defined as African American, Chicano/Latino, and Native American/Alaska Native.
 
-# Survey Analysis
+* Prop.F = Proportion Female, Prop.M = Proportion Male, Prop.D = Proportion Undefined, Prop.T = Proportion Total.
+* Data from: http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data
+* Note, underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
+
+# Survey Demographic
 ```{r, results = 'asis', echo = FALSE}
 
 MH = read.csv("../data.csv")
+
+MH = read.csv("../data.csv")
+ethnicity_short_desc = MH[,grep("^ethn", names(MH))]
+ethnicity_short_desc_tabs = apply(ethnicity_short_desc, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+lapply(ethnicity_short_desc_tabs[3], kable)
+
+```
+
+# Survey and Berkeley Demographic
+```{r, results ='asis', echo = FALSE}
+library(gridBase)
+
+berkeley_vs_survey_data = read.csv("berkeley_vs_survey.csv", header=TRUE, sep=',')
+kable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
+
+## Make some data with names long enough that barplot won't print them all
+DD <- table(rpois(100, lambda=5))
+names(DD) <- paste("long", names(DD), sep="_")
+
+## Plot, but suppress the labels
+midpts <- barplot(berkeley_data$Prop.T., names.arg="")
+text(x=midpts, y=-2, names(DD), cex=0.8, srt=45, xpd=TRUE)
+
+
+## Use grid to add the labels    
+vps <- baseViewports()
+pushViewport(vps$inner, vps$figure, vps$plot)
+text(x=midpts, y=-2, names(DD), cex=0.8, srt=45, xpd=TRUE)
+
+grid.text(names(DD),
+    x = unit(midpts, "native"), y=unit(-1, "lines"),
+    just="right", rot=50)
+
+popViewport(3)
+```
+
+# Survey Analysis
+```{r, results = 'asis', echo = FALSE}
 
 # General living
 genliving = MH[,grep("^a", names(MH))]
