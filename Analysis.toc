@@ -1,11 +1,11 @@
 \contentsline {section}{\numberline {1}Demographics}{2}
 \contentsline {subsection}{\numberline {1.1}UC Berkeley Demographics}{2}
-\contentsline {subsection}{\numberline {1.2}Survey Demographics}{2}
-\contentsline {subsection}{\numberline {1.3}UC Berkeley and survey comparison}{2}
-\contentsline {section}{\numberline {2}All results}{3}
-\contentsline {subsection}{\numberline {2.1}General living}{3}
-\contentsline {subsection}{\numberline {2.2}Academic Life}{3}
-\contentsline {subsection}{\numberline {2.3}Sleeping and eating habits}{3}
-\contentsline {subsection}{\numberline {2.4}Mental Well-being}{3}
-\contentsline {subsection}{\numberline {2.5}Sexual Violence}{3}
-\contentsline {subsection}{\numberline {2.6}Campus Resources}{3}
+\contentsline {subsection}{\numberline {1.2}Survey Demographics}{3}
+\contentsline {subsection}{\numberline {1.3}UC Berkeley and survey comparison}{3}
+\contentsline {section}{\numberline {2}All results}{4}
+\contentsline {subsection}{\numberline {2.1}General living}{4}
+\contentsline {subsection}{\numberline {2.2}Academic Life}{5}
+\contentsline {subsection}{\numberline {2.3}Sleeping and eating habits}{6}
+\contentsline {subsection}{\numberline {2.4}Mental Well-being}{7}
+\contentsline {subsection}{\numberline {2.5}Sexual Violence}{8}
+\contentsline {subsection}{\numberline {2.6}Campus Resources}{9}

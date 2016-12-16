@@ -44,24 +44,28 @@ print(xtable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,]), include.rownam
 \item Note, underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
 \end{itemize}
 
+\newpage
+
 \subsection{Survey Demographics}
-<<results = 'asis', echo = FALSE>>=
+Represents general proportions for the mental health survey administered to students
+<<results = 'asis', echo=FALSE>>=
 demotable = xtable(data.frame(Ethnicity = levels(MH$ethn_shtdesc), Count = as.numeric(table(MH$ethn_shtdesc)), Proportion = as.numeric(prop.table(table(MH$ethn_shtdesc)))))
 digits(demotable) <- c(2,2,0,4)
 print(demotable, include.rownames = FALSE)
 @
 
 \subsection{UC Berkeley and survey comparison}
-
-FIGURE OUT SIGNIFICANCE HERE
+Table representing a comparison between the University Of California, Berkeley's reported fall 2016 student ethnicity profile versus the the mental health survey administered to the conveience sample.
 <<results = 'asis', echo = FALSE>>=
 berkeley_vs_survey_data = read.csv("berkeley_vs_survey.csv", header=TRUE, sep=',')
 xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
-
 @
 
+\newpage
+
 \section{All results}
-<<echo = FALSE>>=
+Raw results for proportions
+<<results='asis', echo = FALSE>>=
 #Function to make table
 maketable = function(dataframe, maxnum, options){
   df = dataframe[,which(sapply(dataframe, max, na.rm = TRUE) == maxnum)]
@@ -72,6 +76,7 @@ maketable = function(dataframe, maxnum, options){
 @
 
 \subsection{General living}
+Questions pertaining to the "General Livin" aspect of the survey.
 <<results = 'asis', echo = FALSE>>=
 genliving = MH[,grep("^a", names(MH))]
 
@@ -83,7 +88,10 @@ maketable(dataframe = genliving, maxnum = 5, options = c("Very Poor", "Poor", "F
 
 @
 
+\newpage 
+
 \subsection{Academic Life}
+Questions regarding the academic life of students.
 <<echo = FALSE, results = 'asis'>>=
 academic = MH[,grep("^b", names(MH))]
 names(academic) = c("Past week: I felt anxious and agitated", "	Past week: I felt stressed due to academic reasons", "Past week: My academic stress prevented me from maintaining my self-care", "Academics is the main reason I am stressed in my life", "I feel pressured by parents' expectations to succeed", "I feel pressured by my own expectations to succeed", "My stress impacts me more physically than mentally", "Univ. adequately provides support with academic stress", "I utilize campus resources for anxiety/academic stress")
@@ -94,7 +102,10 @@ maketable(dataframe = academic, maxnum = 7, options = c("Strongly Disagree", "Di
 maketable(dataframe = academic, maxnum = 3, options = c("Rarely or none of the time", "Some or a little of the time", "Occasionally or a moderate amount of the time", "All of the time", "NA"))
 @
 
+\newpage 
+
 \subsection{Sleeping and eating habits}
+Questions regarding the sleeping and eating habits of students.
 
 <<echo = FALSE, results = 'asis'>>=
 sleepeat = MH[,grep("^c", names(MH))]
@@ -107,7 +118,10 @@ maketable(dataframe = sleepeat, maxnum = 7, options = c("Strongly Disagree", "Di
 maketable(dataframe = sleepeat, maxnum = 6, options = c("0-2", "3-4", "5-6", "7-8", "8-10", "10+", "NA")) #THIS ISNT WORKING
 @
 
+\newpage
+
 \subsection{Mental Well-being}
+Questions regarding the well-being of students.
 <<echo = FALSE, results = 'asis'>>=
 mental = MH[,grep("^d", names(MH))]
 names(mental) = c("Past week: I felt depressed", "Past week: I felt hopeful about the future", "Past week: I felt happy with my life", "Past week: I felt alone and isolated", "Past week: I felt like it was hard to \``get up \" from lack of energy & motivation", "	Past week: I felt less interested in things I usually enjoy", "	Past week: I felt upset about the way my life was heading", "Past week: I felt like utilizing campus resources for mental distress", "Past week: I felt like a bad person", "Past week: I found it hard to focus on the positive aspects of life", "	In the past month I felt like utilizing campus resources for mental distress", "	Ever diagnosed with depression by a clinical professional")
@@ -118,7 +132,9 @@ maketable(dataframe = mental, maxnum = 1, options = c("No", "Yes", "NA")) #THIS 
 
 @
 
+\newpage
 \subsection{Sexual Violence}
+Questions regarding the sexual violence of students.
 <<echo = FALSE, results= 'asis'>>=
 sexvio = MH[,grep("^e[0-9]", names(MH))]
 sexvio$e12 = NULL
@@ -131,10 +147,11 @@ maketable(dataframe = sexvio, maxnum = 10, options = c("1 = Not at all", " ", " 
 maketable(dataframe = sexvio, maxnum = 4, options = c("Yes, for information only", "Yes, for support only", "Yes, for both information and support", "No, have not accessed", "NA"))
 
 maketable(dataframe = sexvio, maxnum = 3, options = c("I did not have a need", "I did not know about these resources", "I did not feel comfortable accessing these services", "No, have not accessed")) #Not working
-
 @
 
+\newpage
 \subsection{Campus Resources}
+Questions regarding the campus resources available to students.
 <<echo = FALSE, results = 'asis'>>=
 cresources = MH[,grep("^f", names(MH))]
 names(cresources) = c("Resource awareness: UHS at the Tang Center: Counseling & Psychological Services",
@@ -217,7 +234,6 @@ names(cresources) = c("Resource awareness: UHS at the Tang Center: Counseling & 
 #names(cresources) = c("UHS at the Tang Center: Counseling & Psychological Services (CPS)","Tang Center CPS Satellite Counseling Services on campus","Nap spaces on campus","Peer Health Workers for IFC, PHC, Housing, Co-Op residents","Student-to-Student Peer Counseling","Tang Center Health Coaching","Confidential Care Advocates","CPS - A friend","CPS - Professor/GSI","CPS - Peer Support Organization","CPS - Flier","CPS - Email/Online Website","CPS - Other","CPS - Don't know/Don't remember","CPS campus Satellite Counseling Services - A friend","CPS campus Satellite Counseling Services - Professor/GSI","CPS campus Satellite Counseling Services - Peer Support Organization","CPS campus Satellite Counseling Services - Flier","CPS campus Satellite Counseling Services - Email/Online Website","CPS campus Satellite Counseling Services - Other","CPS campus Satellite Counseling Services - Don't know/Don't remember","Nap spaces on campus - A friend","Nap spaces on campus - Professor/GSI","Nap spaces on campus - Peer Support Organization","Nap spaces on campus - Flier","Nap spaces on campus - Email/Online Website","Nap spaces on campus - Other","Nap spaces on campus - Don't know/Don't remember","Peer Health Workers - A friend","Peer Health Workers - Professor/GSI","Peer Health Workers - Peer Support Organization","Peer Health Workers - Flier","Peer Health Workers - Email/Online Website","Peer Health Workers - Other","Peer Health Workers - Don't know/Don't remember","Student-to-Student Peer Counseling - A friend","Student-to-Student Peer Counseling - Professor/GSI","Student-to-Student Peer Counseling - Peer Support Organization","Student-to-Student Peer Counseling - Flier","Student-to-Student Peer Counseling - Email/Online Website","Student-to-Student Peer Counseling - Other","Student-to-Student Peer Counseling - Don't know/Don't remember","Tang Center Health Coaching - A friend","Tang Center Health Coaching - Professor/GSI","Tang Center Health Coaching - Peer Support Organization","Tang Center Health Coaching - Flier","Tang Center Health Coaching - Email/Online Website","Tang Center Health Coaching - Other","Tang Center Health Coaching - Don't know/Don't remember","Confidential Care Advocates - A friend","Confidential Care Advocates - Professor/GSI","Confidential Care Advocates - Peer Support Organization","Confidential Care Advocates - Flier","Confidential Care Advocates - Email/Online Website","Confidential Care Advocates - Other","Confidential Care Advocates - Don't know/Don't remember","Rate services: Counseling and Psychological Services","Rate services: Tang Center CPS Satellite Counseling Services on campus","Rate services: Nap spaces on campus","Rate services: Peer Health Workers","Rate services: Student-to-Student Peer Counseling","Rate services: Tang Center Health Coaching","Rate services: Confidential Care Advocates","Resource expansion: Counseling and Psychological Services (CPS)","Resource expansion: CPS Satellite Counseling Services on campus","Resource expansion: Nap spaces on campus","Resource expansion: Peer Health Workers","Resource expansion: Student-to-Student Peer Counseling","Resource expansion: Tang Center Health Coaching","Resource expansion: Confidential Care Advocates","Wait for mental health aid impedes on students use of these resources","Talk with GSI/professor about mental health and resources","Was information accurate, relevant and beneficial","GSIs and professors should be better trained to help with mental health issues","How likely would you be to approach the Tang Center or other campus resources")
 
 maketable(dataframe = cresources, maxnum = 3, options = c("", "", "", "", ""))
-
 @
 
 \end{document}
