@@ -5,10 +5,40 @@ date: "December 5, 2016"
 output: pdf_document
 ---
 
+# UC Berkeley Demographic
 ```{r, results = 'asis', echo = FALSE}
 library(knitr)
 
-MH = read.csv("Data/data.csv")
+berkeley_data = read.csv("berkeley_data.csv", header=TRUE, sep=',')
+kable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,])
+```
+
+* Prop.F = Proportion Female, Prop.M = Proportion Male, Prop.D = Proportion Undefined, Prop.T = Proportion Total.
+* Data from: http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data
+* Note, underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
+
+# Survey Demographic
+```{r, results = 'asis', echo = FALSE}
+
+MH = read.csv("../data.csv")
+
+MH = read.csv("../data.csv")
+ethnicity_short_desc = MH[,grep("^ethn", names(MH))]
+ethnicity_short_desc_tabs = apply(ethnicity_short_desc, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+lapply(ethnicity_short_desc_tabs[3], kable)
+
+```
+
+# Survey and Berkeley Demographic
+```{r, results ='asis', echo = FALSE}
+
+berkeley_vs_survey_data = read.csv("berkeley_vs_survey.csv", header=TRUE, sep=',')
+kable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
+
+```
+
+# General Living
+```{r, results = 'asis', echo = FALSE}
 
 # General living
 genliving = MH[,grep("^a", names(MH))]
@@ -16,15 +46,46 @@ genliving_tabs = apply(genliving, 2, function(x) cbind(Count = table(x, useNA = 
 names(genliving_tabs) = c("Life & Living conditions: The conditions of my life are excellent", "Life & Living conditions: I am satisfied with my life", "Life & Living conditions: I am satisfied with my living conditions", "Life & Living conditions: Where I live, I feel safe", "Health rating: Physical Health", "Health rating: Mental Health", "Financial: Confidence in financial situation", "Financial: Often cut back on important spending", "Financial: I have been concerned about money lately", "Aspects of Life: Academic life", "Aspects of Life: Social life", "Aspects of Life: Residential life")
 lapply(genliving_tabs, kable)
 
-aclife = MH[,grep("^b", names(MH))]
-aclife_tabs = apply(aclife, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+#aclife = MH[,grep("^b", names(MH))]
+#aclife_tabs = apply(aclife, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
 #names(aclife_tabs) = c("I felt anxious")
-lapply(aclife_tabs, kable)
+#lapply(aclife_tabs, kable)
 
-
-names(MH[,grep("([a-z])$", names(MH))])
-#
-
-
-MH_respond = MH[!is.na(MH$intro == 1),]
+#MH_respond = MH[!is.na(MH$intro == 1),]
 ```
+
+# Academic Life
+
+```{r, results = 'asis', echo = FALSE}
+# Academic Life
+academic = MH[,grep("^b", names(MH))]
+academic_tabs = apply(academic, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+names(academic_tabs) = c("Past week: I felt anxious and agitated", "	Past week: I felt stressed due to academic reasons", "Past week: My academic stress prevented me from maintaining my self-care", "Academic life: Academics is the main reason I am stressed in my life", "	Academic life: I feel pressured by parents' expectations for me to succeed", "	Academic life: I feel pressured by my own expectations to succeed", "Academic life: My stress impacts me more physically than mentally", "	Academic life: University adequately provides support to cope with academic stress", "Academic life: I utilize campus resources for anxiety and academic stress")
+lapply(academic_tabs, kable)
+```
+
+# Sleeping and Eating
+
+# Mental Well-being
+
+```{r, results = 'asis', echo = FALSE}
+# Mental Well-being
+mental = MH[,grep("^d", names(MH))]
+mental_tabs = apply(mental, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+names(mental_tabs) = c("	Past week: I felt depressed", "Past week: I felt hopeful about the future", "Past week: I felt happy with my life", "Past week: I felt alone and isolated", "Past week: I felt like it was hard to \" get up \" from lack of energy & motivation", "	Past week: I felt less interested in things I usually enjoy", "	Past week: I felt upset about the way my life was heading", "Past week: I felt like utilizing campus resources for mental distress", "Past week: I felt like a bad person", "Past week: I found it hard to focus on the positive aspects of life", "	In the past month I felt like utilizing campus resources for mental distress", "	Ever diagnosed with depression by a clinical professional")
+lapply(mental_tabs, kable)
+```
+
+# Sexual Violence
+
+# Campus Resources
+
+```{r, results = 'asis', echo = FALSE}
+# Campus Resources
+cresources = MH[,grep("^f", names(MH))]
+cresources_tabs = apply(cresources, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+names(cresources_tabs) = c("Resource awareness: UHS at the Tang Center: Counseling & Psychological Services (CPS)","Resource awareness: Tang Center CPS Satellite Counseling Services on campus","Resource awareness: Nap spaces on campus","Resource awareness: Peer Health Workers for IFC, PHC, Housing, Co-Op residents","Resource awareness: Student-to-Student Peer Counseling","Resource awareness: Tang Center Health Coaching","Resource awareness: Confidential Care Advocates","How hear about: CPS - A friend","How hear about: CPS - Professor/GSI","How hear about: CPS - Peer Support Organization","How hear about: CPS - Flier","How hear about: CPS - Email/Online Website","How hear about: CPS - Other","How hear about: CPS - Don \' t know/Don \' t remember","How hear about: CPS campus Satellite Counseling Services - A friend","How hear about: CPS campus Satellite Counseling Services - Professor/GSI","How hear about: CPS campus Satellite Counseling Services - Peer Support Organization","How hear about: CPS campus Satellite Counseling Services - Flier","How hear about: CPS campus Satellite Counseling Services - Email/Online Website","How hear about: CPS campus Satellite Counseling Services - Other","How hear about: CPS campus Satellite Counseling Services - Don \' t know/Don \' t remember","How hear about: Nap spaces on campus - A friend","How hear about: Nap spaces on campus - Professor/GSI","How hear about: Nap spaces on campus - Peer Support Organization","How hear about: Nap spaces on campus - Flier","How hear about: Nap spaces on campus - Email/Online Website","How hear about: Nap spaces on campus - Other","How hear about: Nap spaces on campus - Don \' t know/Don \' t remember","How hear about: Peer Health Workers - A friend","How hear about: Peer Health Workers - Professor/GSI","How hear about: Peer Health Workers - Peer Support Organization","How hear about: Peer Health Workers - Flier","How hear about: Peer Health Workers - Email/Online Website","How hear about: Peer Health Workers - Other","How hear about: Peer Health Workers - Don \' t know/Don \' t remember","How hear about: Student-to-Student Peer Counseling - A friend","How hear about: Student-to-Student Peer Counseling - Professor/GSI","How hear about: Student-to-Student Peer Counseling - Peer Support Organization","How hear about: Student-to-Student Peer Counseling - Flier","How hear about: Student-to-Student Peer Counseling - Email/Online Website","How hear about: Student-to-Student Peer Counseling - Other","How hear about: Student-to-Student Peer Counseling - Don \' t know/Don \' t remember","How hear about: Tang Center Health Coaching - A friend","How hear about: Tang Center Health Coaching - Professor/GSI","How hear about: Tang Center Health Coaching - Peer Support Organization","How hear about: Tang Center Health Coaching - Flier","How hear about: Tang Center Health Coaching - Email/Online Website","How hear about: Tang Center Health Coaching - Other","How hear about: Tang Center Health Coaching - Don \' t know/Don \' t remember","How hear about: Confidential Care Advocates - A friend","How hear about: Confidential Care Advocates - Professor/GSI","How hear about: Confidential Care Advocates - Peer Support Organization","How hear about: Confidential Care Advocates - Flier","How hear about: Confidential Care Advocates - Email/Online Website","How hear about: Confidential Care Advocates - Other","How hear about: Confidential Care Advocates - Don \' t know/Don \' t remember","Rate services: Counseling and Psychological Services","Rate services: Tang Center CPS Satellite Counseling Services on campus","Rate services: Nap spaces on campus","Rate services: Peer Health Workers","Rate services: Student-to-Student Peer Counseling","Rate services: Tang Center Health Coaching","Rate services: Confidential Care Advocates","Resource expansion: Counseling and Psychological Services (CPS)","Resource expansion: CPS Satellite Counseling Services on campus","Resource expansion: Nap spaces on campus","Resource expansion: Peer Health Workers","Resource expansion: Student-to-Student Peer Counseling","Resource expansion: Tang Center Health Coaching","Resource expansion: Confidential Care Advocates","Wait for mental health aid impedes on students use of these resources","Talk with GSI/professor about mental health and resources","Was information accurate, relevant and beneficial","GSIs and professors should be better trained to help with mental health issues","How likely would you be to approach the Tang Center or other campus resources")
+lapply(cresources_tabs, kable)
+```
+
+# Demographic Information
