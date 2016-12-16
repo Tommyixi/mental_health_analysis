@@ -21,7 +21,8 @@ TODO:
 \item add counts to tables
 \item signifiance to difference table
 \item fix 1D error things
-\item which ethnicity should we use???
+\item Chi-sq...choose which ones want to examine significant associations
+\item 1) sexual orientation 2) gender identity 3) ethnicity 4) where they live
 \end{itemize}
 
 \section{Demographics}
@@ -32,6 +33,7 @@ library(knitr)
 
 MH = read.csv("Data/data.csv")
 MH[,grep(pattern = "text$", names(MH))] = NULL
+MH = MH[MH$status == 1 | MH$status == 2,]
 berkeley_data = read.csv("berkeley_data.csv", header=TRUE, sep=',')
 print(xtable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,]), include.rownames = FALSE)
 @
@@ -214,7 +216,7 @@ names(cresources) = c("Resource awareness: UHS at the Tang Center: Counseling & 
 
 #names(cresources) = c("UHS at the Tang Center: Counseling & Psychological Services (CPS)","Tang Center CPS Satellite Counseling Services on campus","Nap spaces on campus","Peer Health Workers for IFC, PHC, Housing, Co-Op residents","Student-to-Student Peer Counseling","Tang Center Health Coaching","Confidential Care Advocates","CPS - A friend","CPS - Professor/GSI","CPS - Peer Support Organization","CPS - Flier","CPS - Email/Online Website","CPS - Other","CPS - Don't know/Don't remember","CPS campus Satellite Counseling Services - A friend","CPS campus Satellite Counseling Services - Professor/GSI","CPS campus Satellite Counseling Services - Peer Support Organization","CPS campus Satellite Counseling Services - Flier","CPS campus Satellite Counseling Services - Email/Online Website","CPS campus Satellite Counseling Services - Other","CPS campus Satellite Counseling Services - Don't know/Don't remember","Nap spaces on campus - A friend","Nap spaces on campus - Professor/GSI","Nap spaces on campus - Peer Support Organization","Nap spaces on campus - Flier","Nap spaces on campus - Email/Online Website","Nap spaces on campus - Other","Nap spaces on campus - Don't know/Don't remember","Peer Health Workers - A friend","Peer Health Workers - Professor/GSI","Peer Health Workers - Peer Support Organization","Peer Health Workers - Flier","Peer Health Workers - Email/Online Website","Peer Health Workers - Other","Peer Health Workers - Don't know/Don't remember","Student-to-Student Peer Counseling - A friend","Student-to-Student Peer Counseling - Professor/GSI","Student-to-Student Peer Counseling - Peer Support Organization","Student-to-Student Peer Counseling - Flier","Student-to-Student Peer Counseling - Email/Online Website","Student-to-Student Peer Counseling - Other","Student-to-Student Peer Counseling - Don't know/Don't remember","Tang Center Health Coaching - A friend","Tang Center Health Coaching - Professor/GSI","Tang Center Health Coaching - Peer Support Organization","Tang Center Health Coaching - Flier","Tang Center Health Coaching - Email/Online Website","Tang Center Health Coaching - Other","Tang Center Health Coaching - Don't know/Don't remember","Confidential Care Advocates - A friend","Confidential Care Advocates - Professor/GSI","Confidential Care Advocates - Peer Support Organization","Confidential Care Advocates - Flier","Confidential Care Advocates - Email/Online Website","Confidential Care Advocates - Other","Confidential Care Advocates - Don't know/Don't remember","Rate services: Counseling and Psychological Services","Rate services: Tang Center CPS Satellite Counseling Services on campus","Rate services: Nap spaces on campus","Rate services: Peer Health Workers","Rate services: Student-to-Student Peer Counseling","Rate services: Tang Center Health Coaching","Rate services: Confidential Care Advocates","Resource expansion: Counseling and Psychological Services (CPS)","Resource expansion: CPS Satellite Counseling Services on campus","Resource expansion: Nap spaces on campus","Resource expansion: Peer Health Workers","Resource expansion: Student-to-Student Peer Counseling","Resource expansion: Tang Center Health Coaching","Resource expansion: Confidential Care Advocates","Wait for mental health aid impedes on students use of these resources","Talk with GSI/professor about mental health and resources","Was information accurate, relevant and beneficial","GSIs and professors should be better trained to help with mental health issues","How likely would you be to approach the Tang Center or other campus resources")
 
-maketable()
+maketable(dataframe = cresources, maxnum = 3, options = c("", "", "", "", ""))
 
 @
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 DEC 2016 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 DEC 2016 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,29 +306,35 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 [2]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 295.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 296.
 
-Overfull \hbox (14.47014pt too wide) in paragraph at lines 295--295
+Overfull \hbox (14.47014pt too wide) in paragraph at lines 296--296
 []\OT1/cmtt/m/n/10 ## Error in apply(df, 2, function(x) prop.table(table(x, use
 NA = "always"))): dim(X) must have a positive
  []
 
 
-Overfull \hbox (14.47014pt too wide) in paragraph at lines 321--321
+Overfull \hbox (14.47014pt too wide) in paragraph at lines 322--322
 []\OT1/cmtt/m/n/10 ## Error in apply(df, 2, function(x) prop.table(table(x, use
 NA = "always"))): dim(X) must have a positive
  []
 
 
-Overfull \hbox (14.47014pt too wide) in paragraph at lines 327--327
+Overfull \hbox (14.47014pt too wide) in paragraph at lines 328--328
 []\OT1/cmtt/m/n/10 ## Error in apply(df, 2, function(x) prop.table(table(x, use
 NA = "always"))): dim(X) must have a positive
  []
 
 
-Overfull \hbox (14.47014pt too wide) in paragraph at lines 365--365
+Overfull \hbox (14.47014pt too wide) in paragraph at lines 366--366
 []\OT1/cmtt/m/n/10 ## Error in apply(df, 2, function(x) prop.table(table(x, use
 NA = "always"))): dim(X) must have a positive
+ []
+
+
+Overfull \hbox (3.97023pt too wide) in paragraph at lines 372--372
+[]\OT1/cmtt/m/n/10 ## Error in `colnames<-`(`*tmp*`, value = c("", "", "", "", 
+"")): length of 'dimnames' [2] not equal to
  []
 
 [3] [4] [5] [6] [7] (./Analysis.aux) ) 
@@ -348,7 +354,7 @@ e1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb>
-Output written on Analysis.pdf (7 pages, 105651 bytes).
+Output written on Analysis.pdf (7 pages, 106670 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
