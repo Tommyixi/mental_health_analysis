@@ -26,6 +26,7 @@ TODO:
 \end{itemize}
 
 \section{Demographics}
+ Data representing the ethnic diversity of the fall 2016 undergraduates at the Univeristy of California, Berkeley (UCB).Information provided from the office of planning and development  (http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data).
 \subsection{UC Berkeley Demographics}
 <<echo = FALSE, results = 'asis'>>=
 library(xtable)
@@ -47,7 +48,7 @@ print(xtable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,]), include.rownam
 \newpage
 
 \subsection{Survey Demographics}
-Represents general proportions for the mental health survey administered to students
+Table represents the ethnicity profile (as populated by the UCB) for survey participants who completed the Undergraduate Student Well-being Survey - 2016" (USWBS). 
 <<results = 'asis', echo=FALSE>>=
 demotable = xtable(data.frame(Ethnicity = levels(MH$ethn_shtdesc), Count = as.numeric(table(MH$ethn_shtdesc)), Proportion = as.numeric(prop.table(table(MH$ethn_shtdesc)))))
 digits(demotable) <- c(2,2,0,4)
@@ -55,7 +56,7 @@ print(demotable, include.rownames = FALSE)
 @
 
 \subsection{UC Berkeley and survey comparison}
-Table representing a comparison between the University Of California, Berkeley's reported fall 2016 student ethnicity profile versus the the mental health survey administered to the conveience sample.
+Table represents a comparison between the proportions reported by UCB and those individuals who completed the USWBS.
 <<results = 'asis', echo = FALSE>>=
 berkeley_vs_survey_data = read.csv("berkeley_vs_survey.csv", header=TRUE, sep=',')
 xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
@@ -64,7 +65,7 @@ xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
 \newpage
 
 \section{All results}
-Raw results for proportions
+The following section provides a breakdown of each of the questions asked and how participants responded. Sections are broken down into the various survey subject areas, including: general living, academic life, sleeping and eating habits, mental well-being, sexual violece, and campus resources.
 <<results='asis', echo = FALSE>>=
 #Function to make table
 maketable = function(dataframe, maxnum, options){
@@ -76,7 +77,7 @@ maketable = function(dataframe, maxnum, options){
 @
 
 \subsection{General living}
-Questions pertaining to the "General Livin" aspect of the survey.
+Questions pertaining to the "General Living" aspect of the survey. As noted on the survey, "The  [general living questions] will cover satisfaction with life as well as questions about how your financial situation affects your everyday life.  Please indicate your agreement with the statements below to the best of your ability."
 <<results = 'asis', echo = FALSE>>=
 genliving = MH[,grep("^a", names(MH))]
 
@@ -91,7 +92,7 @@ maketable(dataframe = genliving, maxnum = 5, options = c("Very Poor", "Poor", "F
 \newpage 
 
 \subsection{Academic Life}
-Questions regarding the academic life of students.
+Questions pertaining to the "Academic Life" aspect of the survey. As noted on the survey, "The [academic life] section will cover anxiety and academic stress.  We would like to learn more about how academics are affecting your levels of stress, and also how you have felt within the last month.  We would like to know how stress and anxiety is affecting you as it plays a large role in your general well-being."
 <<echo = FALSE, results = 'asis'>>=
 academic = MH[,grep("^b", names(MH))]
 names(academic) = c("Past week: I felt anxious and agitated", "	Past week: I felt stressed due to academic reasons", "Past week: My academic stress prevented me from maintaining my self-care", "Academics is the main reason I am stressed in my life", "I feel pressured by parents' expectations to succeed", "I feel pressured by my own expectations to succeed", "My stress impacts me more physically than mentally", "Univ. adequately provides support with academic stress", "I utilize campus resources for anxiety/academic stress")
@@ -105,7 +106,10 @@ maketable(dataframe = academic, maxnum = 3, options = c("Rarely or none of the t
 \newpage 
 
 \subsection{Sleeping and eating habits}
-Questions regarding the sleeping and eating habits of students.
+Questions pertaining to the "sleeping and eating habits" aspect of the survey. As noted on the survey,"The [sleeping and eating habits section] will cover sleeping and eating habits.  We would like to
+learn more about the quality and amount of sleep undergraduate students receive,
+as well as the extent to which they have access to and eat healthy food because
+sleep and diet are both essential elements of wellness."
 
 <<echo = FALSE, results = 'asis'>>=
 sleepeat = MH[,grep("^c", names(MH))]
@@ -121,7 +125,12 @@ maketable(dataframe = sleepeat, maxnum = 6, options = c("0-2", "3-4", "5-6", "7-
 \newpage
 
 \subsection{Mental Well-being}
-Questions regarding the well-being of students.
+Questions pertaining to the "Mental Well-being" aspect of the survey. As noted on the survey, "
+The "mental well-being section" of the survey will assess undergraduate students’ happiness
+and how they feel about life.  Some of the following questions are related to
+feelings of depression, and responses will be used to learn more about the
+wellness of the undergraduate population and shape what the campus can do to
+address it."
 <<echo = FALSE, results = 'asis'>>=
 mental = MH[,grep("^d", names(MH))]
 names(mental) = c("Past week: I felt depressed", "Past week: I felt hopeful about the future", "Past week: I felt happy with my life", "Past week: I felt alone and isolated", "Past week: I felt like it was hard to \``get up \" from lack of energy & motivation", "	Past week: I felt less interested in things I usually enjoy", "	Past week: I felt upset about the way my life was heading", "Past week: I felt like utilizing campus resources for mental distress", "Past week: I felt like a bad person", "Past week: I found it hard to focus on the positive aspects of life", "	In the past month I felt like utilizing campus resources for mental distress", "	Ever diagnosed with depression by a clinical professional")
@@ -134,7 +143,11 @@ maketable(dataframe = mental, maxnum = 1, options = c("No", "Yes", "NA")) #THIS 
 
 \newpage
 \subsection{Sexual Violence}
-Questions regarding the sexual violence of students.
+Questions pertaining to the "Sexual Violence" aspect of the survey. As noted on the survey, "The ASUC is committed to helping create a campus where sexual violence is not
+tolerated, where survivors are supported, and perpetrators are held accountable.
+The purpose of the [sexual violence section] is to identify the strengths and needs of our campus
+sexual violence prevention and response services. Feel free to answer all, some,
+or none of the questions."
 <<echo = FALSE, results= 'asis'>>=
 sexvio = MH[,grep("^e[0-9]", names(MH))]
 sexvio$e12 = NULL
@@ -151,7 +164,12 @@ maketable(dataframe = sexvio, maxnum = 3, options = c("I did not have a need", "
 
 \newpage
 \subsection{Campus Resources}
-Questions regarding the campus resources available to students.
+Questions pertaining to the "Campus Resources" aspect of the survey. As noted on the survey, "The [campus resources section] of the survey will address to what extent you, as an
+undergraduate student, are aware of and utilize resources the University of
+California, Berkeley offers to improve student wellness.  Responses will be used
+to see what services are most effective and can be improved.  The following
+questions are about your knowledge and awareness of different campus-related
+mental health resources." 
 <<echo = FALSE, results = 'asis'>>=
 cresources = MH[,grep("^f", names(MH))]
 names(cresources) = c("Resource awareness: UHS at the Tang Center: Counseling & Psychological Services",
