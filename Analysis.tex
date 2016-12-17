@@ -68,17 +68,15 @@
 TODO:
 
 \begin{itemize}
-\item add counts to tables
 \item signifiance to difference table
-\item fix 1D error things
-\item Chi-sq...choose which ones want to examine significant associations
-\item 1) sexual orientation 2) gender identity 3) ethnicity 4) where they live
+\item put question numbers on row names?
+\item clean up tables so they fit...
 \end{itemize}
 
 \section{Demographics}
 \subsection{UC Berkeley Demographics}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:27 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrrr}
@@ -115,7 +113,7 @@ African American/Black & 947 & 0.58 & 0.41 & 0.00 & 0.03 \\
 
 \subsection{Survey Demographics}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:27 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrr}
@@ -146,7 +144,7 @@ Ethnicity & Count & Proportion \\
 
 FIGURE OUT SIGNIFICANCE HERE
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:27 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rlrrr}
@@ -180,7 +178,7 @@ FIGURE OUT SIGNIFICANCE HERE
 
 \subsection{General living}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:27 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrrr}
@@ -198,7 +196,7 @@ The conditions of my life are excellent & 0.057 & 0.093 & 0.107 & 0.115 & 0.228 
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:27 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrr}
@@ -217,7 +215,7 @@ Physical Health & 0.041 & 0.133 & 0.317 & 0.389 & 0.114 & 0.005 \\
 
 \subsection{Academic Life}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:28 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrrr}
@@ -234,7 +232,7 @@ Academics is the main reason I am stressed in my life & 0.020 & 0.070 & 0.065 & 
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:28 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrr}
@@ -252,7 +250,7 @@ Past week: I felt anxious and agitated & 0.114 & 0.280 & 0.311 & 0.266 & 0.029 \
 \subsection{Sleeping and eating habits}
 
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:28 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrr}
@@ -271,7 +269,7 @@ Sleep obstacles: Academics & 0.182 & 0.774 & 0.043 \\
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:28 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrrr}
@@ -291,13 +289,23 @@ I am satisfied with the amount of sleep I usually receive & 0.114 & 0.145 & 0.14
    \hline
 \end{tabular}
 \end{table}
-\begin{kframe}
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:27 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrrr}
+  \hline
+ & \begin{sideways} 0-2 \end{sideways} & \begin{sideways} 3-4 \end{sideways} & \begin{sideways} 5-6 \end{sideways} & \begin{sideways} 7-8 \end{sideways} & \begin{sideways} 8-10 \end{sideways} & \begin{sideways} 10+ \end{sideways} & \begin{sideways} NA \end{sideways} \\ 
+  \hline
+Hours of sleep per day & 0.002 & 0.065 & 0.418 & 0.389 & 0.070 & 0.010 & 0.046 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in apply(df, 2, function(x) prop.table(table(x, useNA = "{}always"{}))): dim(X) must have a positive length}}\end{kframe}
 
 \subsection{Mental Well-being}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:28 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrr}
@@ -317,16 +325,35 @@ Past week: I felt depressed & 0.357 & 0.245 & 0.195 & 0.104 & 0.099 \\
    \hline
 \end{tabular}
 \end{table}
-\begin{kframe}
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:27 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+ & \begin{sideways} No \end{sideways} & \begin{sideways} Yes \end{sideways} & \begin{sideways} NA \end{sideways} \\ 
+  \hline
+	Ever diagnosed with depression by a clinical professional & 0.753 & 0.149 & 0.099 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in apply(df, 2, function(x) prop.table(table(x, useNA = "{}always"{}))): dim(X) must have a positive length}}\end{kframe}
 
 \subsection{Sexual Violence}
-\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in apply(df, 2, function(x) prop.table(table(x, useNA = "{}always"{}))): dim(X) must have a positive length}}\end{kframe}% latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:28 2016
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:27 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+ & \begin{sideways} No \end{sideways} & \begin{sideways} Yes \end{sideways} & \begin{sideways} NA \end{sideways} \\ 
+  \hline
+Option to answer sexual violence prevention section & 0.367 & 0.533 & 0.101 \\ 
+   \hline
+\end{tabular}
+\end{table}
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrrrrrr}
@@ -342,7 +369,7 @@ UG Student Well-Being Survey & 0.042 & 0.052 & 0.052 & 0.052 & 0.053 & 0.054 & 0
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 13:22:28 2016
+% Fri Dec 16 17:59:27 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrr}
@@ -361,14 +388,350 @@ Tang medical services & 0.053 & 0.011 & 0.025 & 0.422 & 0.489 \\
    \hline
 \end{tabular}
 \end{table}
-\begin{kframe}
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:27 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & \begin{sideways} I did not have a need \end{sideways} & \begin{sideways} I did not know about these resources \end{sideways} & \begin{sideways} I did not feel comfortable accessing these services \end{sideways} & \begin{sideways} No, have not accessed \end{sideways} \\ 
+  \hline
+Why haven't used services for information or support about sexual violence & 0.279 & 0.009 & 0.025 & 0.688 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in apply(df, 2, function(x) prop.table(table(x, useNA = "{}always"{}))): dim(X) must have a positive length}}\end{kframe}
 
 \subsection{Campus Resources}
-\begin{kframe}
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:27 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & \begin{sideways} I have not heard about until now \end{sideways} & \begin{sideways} I have heard about but have not used \end{sideways} & \begin{sideways} I have used this service \end{sideways} & \begin{sideways} NA \end{sideways} \\ 
+  \hline
+Resource awareness: UHS at the Tang Center: Counseling \& Psychological Services & 0.065 & 0.539 & 0.273 & 0.123 \\ 
+  Resource awareness: Tang Center CPS Satellite Counseling Services on campus & 0.356 & 0.401 & 0.121 & 0.121 \\ 
+  Resource awareness: Nap spaces on campus & 0.149 & 0.641 & 0.090 & 0.120 \\ 
+  Resource awareness: Peer Health Workers for IFC, PHC, Housing, Co-Op residents & 0.343 & 0.461 & 0.075 & 0.121 \\ 
+  Resource awareness: Student-to-Student Peer Counseling & 0.302 & 0.535 & 0.042 & 0.121 \\ 
+  Resource awareness: Tang Center Health Coaching & 0.379 & 0.465 & 0.035 & 0.121 \\ 
+  Resource awareness: Confidential Care Advocates & 0.541 & 0.318 & 0.020 & 0.121 \\ 
+   \hline
+\end{tabular}
+\end{table}
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:27 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+ & \begin{sideways} No \end{sideways} & \begin{sideways} Yes \end{sideways} & \begin{sideways} NA \end{sideways} \\ 
+  \hline
+How hear about: CPS - A friend & 0.562 & 0.248 & 0.190 \\ 
+  How hear about: CPS - Professor/GSI & 0.716 & 0.094 & 0.190 \\ 
+  How hear about: CPS - Peer Support Organization & 0.745 & 0.065 & 0.190 \\ 
+  How hear about: CPS - Flier & 0.689 & 0.121 & 0.190 \\ 
+  How hear about: CPS - Email/Online Website & 0.464 & 0.346 & 0.190 \\ 
+  How hear about: CPS - Other & 0.716 & 0.094 & 0.190 \\ 
+  How hear about: CPS - Don't know/Don't remember & 0.663 & 0.148 & 0.190 \\ 
+  How hear about: CPS campus Satellite Counseling Services - A friend & 0.430 & 0.092 & 0.478 \\ 
+  How hear about: CPS campus Satellite Counseling Services - Professor/GSI & 0.487 & 0.035 & 0.478 \\ 
+  How hear about: CPS campus Satellite Counseling Services - Peer Support Organization & 0.484 & 0.038 & 0.478 \\ 
+  How hear about: CPS campus Satellite Counseling Services - Flier & 0.469 & 0.053 & 0.478 \\ 
+  How hear about: CPS campus Satellite Counseling Services - Email/Online Website & 0.350 & 0.171 & 0.478 \\ 
+  How hear about: CPS campus Satellite Counseling Services - Other & 0.448 & 0.074 & 0.478 \\ 
+  How hear about: CPS campus Satellite Counseling Services - Don't know/Don't remember & 0.373 & 0.149 & 0.478 \\ 
+  How hear about: Nap spaces on campus - A friend & 0.411 & 0.319 & 0.270 \\ 
+  How hear about: Nap spaces on campus - Professor/GSI & 0.710 & 0.020 & 0.270 \\ 
+  How hear about: Nap spaces on campus - Peer Support Organization & 0.717 & 0.013 & 0.270 \\ 
+  How hear about: Nap spaces on campus - Flier & 0.611 & 0.119 & 0.270 \\ 
+  How hear about: Nap spaces on campus - Email/Online Website & 0.313 & 0.416 & 0.270 \\ 
+  How hear about: Nap spaces on campus - Other & 0.679 & 0.051 & 0.270 \\ 
+  How hear about: Nap spaces on campus - Don't know/Don't remember & 0.674 & 0.056 & 0.270 \\ 
+  How hear about: Peer Health Workers - A friend & 0.395 & 0.139 & 0.466 \\ 
+  How hear about: Peer Health Workers - Professor/GSI & 0.523 & 0.011 & 0.466 \\ 
+  How hear about: Peer Health Workers - Peer Support Organization & 0.501 & 0.033 & 0.466 \\ 
+  How hear about: Peer Health Workers - Flier & 0.427 & 0.106 & 0.466 \\ 
+  How hear about: Peer Health Workers - Email/Online Website & 0.409 & 0.125 & 0.466 \\ 
+  How hear about: Peer Health Workers - Other & 0.476 & 0.057 & 0.466 \\ 
+  How hear about: Peer Health Workers - Don't know/Don't remember & 0.389 & 0.144 & 0.466 \\ 
+  How hear about: Student-to-Student Peer Counseling - A friend & 0.447 & 0.129 & 0.424 \\ 
+  How hear about: Student-to-Student Peer Counseling - Professor/GSI & 0.560 & 0.016 & 0.424 \\ 
+  How hear about: Student-to-Student Peer Counseling - Peer Support Organization & 0.535 & 0.041 & 0.424 \\ 
+  How hear about: Student-to-Student Peer Counseling - Flier & 0.475 & 0.101 & 0.424 \\ 
+  How hear about: Student-to-Student Peer Counseling - Email/Online Website & 0.420 & 0.156 & 0.424 \\ 
+  How hear about: Student-to-Student Peer Counseling - Other & 0.528 & 0.048 & 0.424 \\ 
+  How hear about: Student-to-Student Peer Counseling - Don't know/Don't remember & 0.411 & 0.165 & 0.424 \\ 
+  How hear about: Tang Center Health Coaching - A friend & 0.428 & 0.070 & 0.501 \\ 
+  How hear about: Tang Center Health Coaching - Professor/GSI & 0.473 & 0.026 & 0.501 \\ 
+  How hear about: Tang Center Health Coaching - Peer Support Organization & 0.476 & 0.023 & 0.501 \\ 
+  How hear about: Tang Center Health Coaching - Flier & 0.447 & 0.052 & 0.501 \\ 
+  How hear about: Tang Center Health Coaching - Email/Online Website & 0.335 & 0.164 & 0.501 \\ 
+  How hear about: Tang Center Health Coaching - Other & 0.460 & 0.039 & 0.501 \\ 
+  How hear about: Tang Center Health Coaching - Don't know/Don't remember & 0.320 & 0.179 & 0.501 \\ 
+  How hear about: Confidential Care Advocates - A friend & 0.293 & 0.043 & 0.664 \\ 
+  How hear about: Confidential Care Advocates - Professor/GSI & 0.315 & 0.022 & 0.664 \\ 
+  How hear about: Confidential Care Advocates - Peer Support Organization & 0.308 & 0.028 & 0.664 \\ 
+  How hear about: Confidential Care Advocates - Flier & 0.321 & 0.015 & 0.664 \\ 
+  How hear about: Confidential Care Advocates - Email/Online Website & 0.238 & 0.099 & 0.664 \\ 
+  How hear about: Confidential Care Advocates - Other & 0.296 & 0.040 & 0.664 \\ 
+  How hear about: Confidential Care Advocates - Don't know/Don't remember & 0.214 & 0.123 & 0.664 \\ 
+  Resource expansion: Counseling and Psychological Services & 0.358 & 0.527 & 0.115 \\ 
+  Resource expansion: CPS Satellite Counseling Services on campus & 0.702 & 0.183 & 0.115 \\ 
+  Resource expansion: Nap spaces on campus & 0.541 & 0.344 & 0.115 \\ 
+  Resource expansion: Peer Health Workers & 0.822 & 0.063 & 0.115 \\ 
+  Resource expansion: Student-to-Student Peer Counseling & 0.760 & 0.125 & 0.115 \\ 
+  Resource expansion: Tang Center Health Coaching & 0.765 & 0.120 & 0.115 \\ 
+  Resource expansion: Confidential Care Advocates & 0.802 & 0.084 & 0.115 \\ 
+  Talk with GSI/professor about mental health and resources & 0.575 & 0.302 & 0.124 \\ 
+  Was information accurate, relevant and beneficial & 0.024 & 0.277 & 0.700 \\ 
+   \hline
+\end{tabular}
+\end{table}
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:27 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrr}
+  \hline
+ & \begin{sideways} Very poor/Strongly disagree \end{sideways} & \begin{sideways} Poor/Slightly disagree \end{sideways} & \begin{sideways} Average/Neutral \end{sideways} & \begin{sideways} Good/Slightly agree \end{sideways} & \begin{sideways} Very Good/Strongly agree \end{sideways} & \begin{sideways} NA \end{sideways} \\ 
+  \hline
+Rate services: Counseling and Psychological Services & 0.017 & 0.016 & 0.079 & 0.099 & 0.055 & 0.733 \\ 
+  Rate services: Tang Center CPS Satellite Counseling Services on campus & 0.008 & 0.009 & 0.029 & 0.044 & 0.027 & 0.883 \\ 
+  Rate services: Nap spaces on campus & 0.003 & 0.011 & 0.033 & 0.028 & 0.011 & 0.914 \\ 
+  Rate services: Peer Health Workers & 0.002 & 0.001 & 0.022 & 0.027 & 0.020 & 0.928 \\ 
+  Rate services: Student-to-Student Peer Counseling & 0.001 & 0.002 & 0.012 & 0.012 & 0.012 & 0.961 \\ 
+  Rate services: Tang Center Health Coaching & 0.003 & 0.002 & 0.009 & 0.012 & 0.004 & 0.970 \\ 
+  Rate services: Confidential Care Advocates & 0.001 & 0.002 & 0.007 & 0.002 & 0.004 & 0.984 \\ 
+  Wait for mental health aid impedes on students use of these resources & 0.018 & 0.039 & 0.337 & 0.218 & 0.260 & 0.127 \\ 
+  GSIs and professors should be better trained to help with mental health issues & 0.036 & 0.054 & 0.238 & 0.279 & 0.267 & 0.127 \\ 
+  How likely would you be to approach the Tang Center or other campus resources & 0.076 & 0.132 & 0.206 & 0.322 & 0.139 & 0.125 \\ 
+   \hline
+\end{tabular}
+\end{table}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `colnames<-`(`*tmp*`, value = c("{}"{}, "{}"{}, "{}"{}, "{}"{}, "{}"{})): length of 'dimnames' [2] not equal to array extent}}\end{kframe}
+
+\pagebreak
+\section{Inference}
+
+
+
+
+\pagebreak
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:28 2016
+\begin{table}[ht]
+\centering
+\scalebox{0.5}{
+\begin{tabular}{rllllllll}
+  \hline
+ & Ethn. &   & Gender &   & S. Orient &   & Living &   \\ 
+  \hline
+The conditions of my life are excellent & 0.0542 &   & 7e-04 & * & 0.1516 &   & $<$0.0005 & * \\ 
+  I am satisfied with my life & 0.2514 &   & 0.0092 & * & 0.0022 & * & 0.0958 &   \\ 
+  I am satisfied with my living conditions & 0.0241 & * & 0.0014 & * & 0.1949 &   & 0.0881 &   \\ 
+  Where I live, I feel safe & 0.0136 & * & 8e-04 & * & 0.0572 &   & $<$0.0005 & * \\ 
+  Physical Health & 0.0558 &   & $<$0.0005 & * & 0.0035 & * & 0.0015 & * \\ 
+  Mental Health & 0.7555 &   & 0.0027 & * & 0.0029 & * & 0.1538 &   \\ 
+  Confidence in financial situation & $<$0.0005 & * & 9e-04 & * & 0.0256 & * & $<$0.0005 & * \\ 
+  Often cut back on important spending & $<$0.0005 & * & 0.0015 & * & 0.3088 &   & $<$0.0005 & * \\ 
+  I have been concerned about money lately & $<$0.0005 & * & 0.0041 & * & 0.0946 &   & 0.0193 & * \\ 
+  Academic life & 0.254 &   & 0.0011 & * & 0.7181 &   & 5e-04 & * \\ 
+  Social life & 0.0497 & * & 0.2506 &   & 0.1143 &   & 0.0677 &   \\ 
+  Residential life & 0.0745 &   & 0.0566 &   & 0.2554 &   & $<$0.0005 & * \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
+
+
+\pagebreak
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:28 2016
+\begin{table}[ht]
+\centering
+\scalebox{0.5}{
+\begin{tabular}{rllllllll}
+  \hline
+ & Ethn. &   & Gender &   & S. Orient &   & Living &   \\ 
+  \hline
+Hours of sleep per day & 0.2046 &   & 0.0027 & * & 0.1527 &   & 0.144 &   \\ 
+  Sleep obstacles: Academics & 0.9836 &   & 0.0265 & * & 0.1394 &   & 0.578 &   \\ 
+  Sleep obstacles: Anxiety & 0.06 &   & $<$0.0005 & * & 0.0012 & * & 0.0908 &   \\ 
+  Sleep obstacles: Concerns about post-graduation & $<$0.0005 & * & 0.0146 & * & 0.814 &   & $<$0.0005 & * \\ 
+  Sleep obstacles: Finances & $<$0.0005 & * & 0.0365 & * & 0.0324 & * & $<$0.0005 & * \\ 
+  Sleep obstacles: Living conditions & 0.2101 &   & 0.1239 &   & 0.5237 &   & 0.2831 &   \\ 
+  Sleep obstacles: Social concerns & 0.1712 &   & 0.3861 &   & 0.0106 & * & 0.8099 &   \\ 
+  Sleep obstacles: Something else (please specify) & 0.0684 &   & 0.9226 &   & 0.867 &   & 0.0024 & * \\ 
+  Sleep obstacles: Nothing - I am not being prevented from more sleep & 0.8894 &   & 0.6842 &   & 0.9695 &   & 0.6738 &   \\ 
+  I am satisfied with the amount of sleep I usually receive & 0.2063 &   & 0.0013 & * & 0.396 &   & 0.1855 &   \\ 
+  The quality of my sleep is good & 0.0109 & * & 0.1111 &   & 0.1581 &   & 0.0665 &   \\ 
+  The amount of sleep I receive makes me feel irritable & 0.003 & * & 6e-04 & * & 0.2164 &   & 0.1121 &   \\ 
+  The amount I sleep negatively affects my mental health & 0.69 &   & 0.0035 & * & 0.1217 &   & 0.0238 & * \\ 
+  I prioritize my academic performance above sleep & 0.9581 &   & $<$0.0005 & * & 0.0115 & * & 0.0341 & * \\ 
+  I have a problem with daytime sleepiness & 0.7854 &   & $<$0.0005 & * & 0.0026 & * & 0.035 & * \\ 
+  I would benefit from naps during the day & 0.8774 &   & 0.0162 & * & 0.3164 &   & 0.2572 &   \\ 
+  I eat health food that is good for my body & 0.0063 & * & 0.0315 & * & 0.0428 & * & 0.2535 &   \\ 
+  I have easy access to places that sell healthy food & 0.0597 &   & 0.1753 &   & 0.0293 & * & 0.2633 &   \\ 
+  I have easy access to affordable healthy food & 0.2213 &   & 0.1475 &   & 0.7392 &   & 0.0097 & * \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
+
+
+\pagebreak
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:28 2016
+\begin{table}[ht]
+\centering
+\scalebox{0.5}{
+\begin{tabular}{rllllllll}
+  \hline
+ & Ethn. &   & Gender &   & S. Orient &   & Living &   \\ 
+  \hline
+Past week: I felt depressed & 0.2821 &   & 0.0011 & * & $<$0.0005 & * & 0.0175 & * \\ 
+  Past week: I felt hopeful about the future & 0.0713 &   & $<$0.0005 & * & 0.4549 &   & 0.0669 &   \\ 
+  Past week: I felt happy with my life & 0.2258 &   & 0.0739 &   & 0.1264 &   & 0.275 &   \\ 
+  Past week: I felt alone and isolated & 0.0334 & * & 0.0042 & * & 0.003 & * & 0.1237 &   \\ 
+  Past week: I felt like it was hard to ``get up " from lack of energy \& motivation & 0.4715 &   & 8e-04 & * & $<$0.0005 & * & 0.0186 & * \\ 
+  	Past week: I felt less interested in things I usually enjoy & 0.0392 & * & 0.0092 & * & $<$0.0005 & * & 0.2721 &   \\ 
+  	Past week: I felt upset about the way my life was heading & 0.0259 & * & 0.1102 &   & 0.0041 & * & 0.2013 &   \\ 
+  Past week: I felt like utilizing campus resources for mental distress & 0.059 &   & $<$0.0005 & * & $<$0.0005 & * & $<$0.0005 & * \\ 
+  Past week: I felt like a bad person & 0.164 &   & $<$0.0005 & * & 6e-04 & * & 0.6155 &   \\ 
+  Past week: I found it hard to focus on the positive aspects of life & 0.5456 &   & 0.001 & * & $<$0.0005 & * & 0.0026 & * \\ 
+  	In the past month I felt like utilizing campus resources for mental distress & 0.5465 &   & 0.1475 &   & 0.0445 & * & 0.5399 &   \\ 
+  	Ever diagnosed with depression by a clinical professional & 0.0131 & * & $<$0.0005 & * & $<$0.0005 & * & 0.0024 & * \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
+
+
+\pagebreak
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:28 2016
+\begin{table}[ht]
+\centering
+\scalebox{0.5}{
+\begin{tabular}{rllllllll}
+  \hline
+ & Ethn. &   & Gender &   & S. Orient &   & Living &   \\ 
+  \hline
+Option to answer sexual violence prevention section & $<$0.0005 & * & $<$0.0005 & * & 0.0476 & * & 0.4215 &   \\ 
+  UG Student Well-Being Survey & 0.0778 &   & 0.0024 & * & 0.7428 &   & 0.0936 &   \\ 
+  Tang medical services & $<$0.0005 & * & 0.1238 &   & 0.0572 &   & 0.2331 &   \\ 
+  Tang social services & 0.7867 &   & 0.0397 & * & 0.0916 &   & $<$0.0005 & * \\ 
+  Confidential CARE advocates & 0.9956 &   & $<$0.0005 & * & 0.4623 &   & 0.0245 & * \\ 
+  Title IX office/OPHD & 0.9989 &   & $<$0.0005 & * & 0.2757 &   & 0.038 & * \\ 
+  EOP counselors & 0.8445 &   & $<$0.0005 & * & 0.4635 &   & 0.1852 &   \\ 
+  Resident Assistant/Resident Director & 0.58 &   & $<$0.0005 & * & 0.078 &   & 0.9198 &   \\ 
+  Sexual Assault Commission/Cal Consent Campaign & 0.4379 &   & 0.9999 &   & 0.8215 &   & 0.2602 &   \\ 
+  UCPD & 0.4834 &   & $<$0.0005 & * & 0.6139 &   & 0.3613 &   \\ 
+  Other & 0.9999 &   & $<$0.0005 & * & 0.0838 &   & 0.9236 &   \\ 
+  Why haven't used services for information or support about sexual violence & 0.8015 &   & $<$0.0005 & * & 0.0099 & * & 0.0069 & * \\ 
+  Sexual assault and harassment & 0.588 &   & 0.0118 & * & $<$0.0005 & * & 0.3197 &   \\ 
+  Mental health & 0.5146 &   & 0.4915 &   & 0.7029 &   & 0.9964 &   \\ 
+  Maintaining a balanced lifestyle & 0.8937 &   & 0.319 &   & 0.1526 &   & 0.9059 &   \\ 
+  Alcohol use & 0.337 &   & 0.4868 &   & 0.3264 &   & 0.1157 &   \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
+
+
+\pagebreak
+% latex table generated in R 3.3.1 by xtable 1.8-2 package
+% Fri Dec 16 17:59:29 2016
+\begin{table}[ht]
+\centering
+\scalebox{0.5}{
+\begin{tabular}{rllllllll}
+  \hline
+ & Ethn. &   & Gender &   & S. Orient &   & Living &   \\ 
+  \hline
+Resource awareness: UHS at the Tang Center: Counseling \& Psychological Services & 0.1828 &   & $<$0.0005 & * & $<$0.0005 & * & 0.0014 & * \\ 
+  Resource awareness: Tang Center CPS Satellite Counseling Services on campus & 0.8176 &   & 0.0286 & * & $<$0.0005 & * & 0.3504 &   \\ 
+  Resource awareness: Nap spaces on campus & $<$0.0005 & * & 0.3274 &   & 0.9025 &   & $<$0.0005 & * \\ 
+  Resource awareness: Peer Health Workers for IFC, PHC, Housing, Co-Op residents & 0.6068 &   & 0.0327 & * & 0.7289 &   & $<$0.0005 & * \\ 
+  Resource awareness: Student-to-Student Peer Counseling & 0.6315 &   & $<$0.0005 & * & 0.6736 &   & 0.0043 & * \\ 
+  Resource awareness: Tang Center Health Coaching & 0.3615 &   & $<$0.0005 & * & 0.4465 &   & $<$0.0005 & * \\ 
+  Resource awareness: Confidential Care Advocates & 0.3633 &   & $<$0.0005 & * & 0.8678 &   & $<$0.0005 & * \\ 
+  How hear about: CPS - A friend & 0.3659 &   & 0.0138 & * & 0.7106 &   & 0.1736 &   \\ 
+  How hear about: CPS - Professor/GSI & 0.0201 & * & 0.2347 &   & 0.2204 &   & 0.0014 & * \\ 
+  How hear about: CPS - Peer Support Organization & 0.0019 & * & 0.008 & * & 0.607 &   & 0.1791 &   \\ 
+  How hear about: CPS - Flier & 0.3064 &   & 0.0897 &   & 0.6293 &   & 6e-04 & * \\ 
+  How hear about: CPS - Email/Online Website & 0.1376 &   & 0.8706 &   & 0.0517 &   & 0.7022 &   \\ 
+  How hear about: CPS - Other & 0.0744 &   & 0.7017 &   & 0.7267 &   & 0.4421 &   \\ 
+  How hear about: CPS - Don't know/Don't remember & 0.0311 & * & 0.0204 & * & 0.2566 &   & 0.3445 &   \\ 
+  How hear about: CPS campus Satellite Counseling Services - A friend & 0.2317 &   & 0.5958 &   & 0.5954 &   & 0.1235 &   \\ 
+  How hear about: CPS campus Satellite Counseling Services - Professor/GSI & 0.0098 & * & 0.4155 &   & 0.5875 &   & 0.1366 &   \\ 
+  How hear about: CPS campus Satellite Counseling Services - Peer Support Organization & 0.02 & * & 0.1975 &   & 0.7046 &   & 0.4647 &   \\ 
+  How hear about: CPS campus Satellite Counseling Services - Flier & 0.9881 &   & 0.0739 &   & 0.8088 &   & 0.0033 & * \\ 
+  How hear about: CPS campus Satellite Counseling Services - Email/Online Website & 0.0927 &   & 0.2691 &   & 0.1637 &   & 0.2535 &   \\ 
+  How hear about: CPS campus Satellite Counseling Services - Other & 0.752 &   & 0.5141 &   & 0.5031 &   & 0.1683 &   \\ 
+  How hear about: CPS campus Satellite Counseling Services - Don't know/Don't remember & 0.5185 &   & 0.111 &   & 0.6403 &   & 0.9183 &   \\ 
+  How hear about: Nap spaces on campus - A friend & 0.4354 &   & 0.4654 &   & 0.7354 &   & 0.7933 &   \\ 
+  How hear about: Nap spaces on campus - Professor/GSI & 0.2316 &   & 0.1272 &   & 0.2993 &   & 0.5872 &   \\ 
+  How hear about: Nap spaces on campus - Peer Support Organization & 0.2548 &   & 0.9822 &   & 0.713 &   & 0.0646 &   \\ 
+  How hear about: Nap spaces on campus - Flier & 0.0419 & * & 0.0123 & * & 0.0623 &   & 0.6713 &   \\ 
+  How hear about: Nap spaces on campus - Email/Online Website & 0.3566 &   & 0.002 & * & 0.6977 &   & 0.7733 &   \\ 
+  How hear about: Nap spaces on campus - Other & 0.0031 & * & 0.9742 &   & 0.3109 &   & 0.8801 &   \\ 
+  How hear about: Nap spaces on campus - Don't know/Don't remember & 0.4338 &   & 9e-04 & * & 0.9072 &   & 0.7373 &   \\ 
+  How hear about: Peer Health Workers - A friend & 0.6178 &   & 0.3567 &   & 0.6667 &   & 0.0019 & * \\ 
+  How hear about: Peer Health Workers - Professor/GSI & 0.753 &   & $<$0.0005 & * & 0.8521 &   & 0.521 &   \\ 
+  How hear about: Peer Health Workers - Peer Support Organization & 0.2717 &   & 0.2121 &   & 0.7732 &   & 0.7467 &   \\ 
+  How hear about: Peer Health Workers - Flier & 0.6853 &   & 0.1431 &   & 0.8985 &   & 0.03 & * \\ 
+  How hear about: Peer Health Workers - Email/Online Website & 0.255 &   & 0.3842 &   & 0.6932 &   & 0.4696 &   \\ 
+  How hear about: Peer Health Workers - Other & 0.0344 & * & 0.0853 &   & 0.2428 &   & 0.2069 &   \\ 
+  How hear about: Peer Health Workers - Don't know/Don't remember & 0.6975 &   & 0.2138 &   & 0.5437 &   & 0.8087 &   \\ 
+  How hear about: Student-to-Student Peer Counseling - A friend & 0.1509 &   & 0.2357 &   & 0.1696 &   & 0.0499 & * \\ 
+  How hear about: Student-to-Student Peer Counseling - Professor/GSI & 0.6026 &   & 0.5025 &   & 0.7051 &   & 0.99 &   \\ 
+  How hear about: Student-to-Student Peer Counseling - Peer Support Organization & 0.6408 &   & 0.0025 & * & 0.085 &   & 0.783 &   \\ 
+  How hear about: Student-to-Student Peer Counseling - Flier & 0.0605 &   & 0.0175 & * & 0.0097 & * & 0.4062 &   \\ 
+  How hear about: Student-to-Student Peer Counseling - Email/Online Website & 0.0165 & * & 0.3766 &   & 0.6202 &   & 0.5852 &   \\ 
+  How hear about: Student-to-Student Peer Counseling - Other & 0.0134 & * & 0.7082 &   & 0.9283 &   & 0.0906 &   \\ 
+  How hear about: Student-to-Student Peer Counseling - Don't know/Don't remember & 0.5717 &   & 0.011 & * & 0.4986 &   & 0.2877 &   \\ 
+  How hear about: Tang Center Health Coaching - A friend & 0.8221 &   & 0.0832 &   & 0.0686 &   & 0.1258 &   \\ 
+  How hear about: Tang Center Health Coaching - Professor/GSI & 0.8187 &   & 0.5348 &   & 0.1486 &   & 0.7402 &   \\ 
+  How hear about: Tang Center Health Coaching - Peer Support Organization & 0.3668 &   & $<$0.0005 & * & 0.5673 &   & 0.9101 &   \\ 
+  How hear about: Tang Center Health Coaching - Flier & 0.0786 &   & 0.8673 &   & 0.3075 &   & 0.0762 &   \\ 
+  How hear about: Tang Center Health Coaching - Email/Online Website & 0.5209 &   & 0.4186 &   & 0.8019 &   & 0.9548 &   \\ 
+  How hear about: Tang Center Health Coaching - Other & 0.2358 &   & 0.4669 &   & 0.2204 &   & 0.0012 & * \\ 
+  How hear about: Tang Center Health Coaching - Don't know/Don't remember & 0.623 &   & 0.9598 &   & 0.2444 &   & 0.6885 &   \\ 
+  How hear about: Confidential Care Advocates - A friend & 0.7382 &   & 0.0043 & * & 0.5793 &   & 0.0912 &   \\ 
+  How hear about: Confidential Care Advocates - Professor/GSI & 0.1155 &   & 0.4551 &   & 0.4834 &   & 0.0046 & * \\ 
+  How hear about: Confidential Care Advocates - Peer Support Organization & 0.1106 &   & 0.6692 &   & 0.0083 & * & 0.9255 &   \\ 
+  How hear about: Confidential Care Advocates - Flier & 0.9453 &   & 0.8544 &   & 0.9067 &   & 0.9578 &   \\ 
+  How hear about: Confidential Care Advocates - Email/Online Website & 0.3103 &   & 0.4303 &   & 0.9819 &   & 0.1355 &   \\ 
+  How hear about: Confidential Care Advocates - Other & 0.1861 &   & 0.9327 &   & 0.1347 &   & 0.4793 &   \\ 
+  How hear about: Confidential Care Advocates - Don't know/Don't remember & 0.7405 &   & 0.6568 &   & 0.656 &   & 0.2617 &   \\ 
+  Rate services: Counseling and Psychological Services & 0.0437 & * & 0.7443 &   & 0.1934 &   & 0.6069 &   \\ 
+  Rate services: Tang Center CPS Satellite Counseling Services on campus & 0.0224 & * & 0.5545 &   & 0.6462 &   & 0.353 &   \\ 
+  Rate services: Nap spaces on campus & 0.0676 &   & 0.0719 &   & 0.0649 &   & 0.6667 &   \\ 
+  Rate services: Peer Health Workers & 0.5132 &   & 0.0027 & * & 0.0247 & * & 0.0041 & * \\ 
+  Rate services: Student-to-Student Peer Counseling & 0.3923 &   & 0.0326 & * & 0.7327 &   & 0.6524 &   \\ 
+  Rate services: Tang Center Health Coaching & 0.0791 &   & 0.2558 &   & 0.3948 &   & 0.7028 &   \\ 
+  Rate services: Confidential Care Advocates & 0.2883 &   & 0.3713 &   & 0.4016 &   & 0.3862 &   \\ 
+  Resource expansion: Counseling and Psychological Services & 0.0682 &   & 7e-04 & * & 0.0077 & * & 0.1873 &   \\ 
+  Resource expansion: CPS Satellite Counseling Services on campus & 0.6379 &   & 0.3177 &   & 0.3257 &   & 0.8684 &   \\ 
+  Resource expansion: Nap spaces on campus & 0.1281 &   & 0.2046 &   & 0.326 &   & 0.1298 &   \\ 
+  Resource expansion: Peer Health Workers & 0.9861 &   & 0.0122 & * & 0.2888 &   & 0.081 &   \\ 
+  Resource expansion: Student-to-Student Peer Counseling & 0.5811 &   & 0.0225 & * & 0.3331 &   & 0.1019 &   \\ 
+  Resource expansion: Tang Center Health Coaching & 0.3726 &   & 0.2438 &   & 0.0744 &   & 0.6696 &   \\ 
+  Resource expansion: Confidential Care Advocates & 0.2276 &   & 0.2734 &   & 0.607 &   & 0.7102 &   \\ 
+  Wait for mental health aid impedes on students use of these resources & 0.1437 &   & 0.094 &   & 0.02 & * & $<$0.0005 & * \\ 
+  Talk with GSI/professor about mental health and resources & 0.2424 &   & 0.1016 &   & 0.7995 &   & 0.3005 &   \\ 
+  Was information accurate, relevant and beneficial & 0.1314 &   & 0.35 &   & 0.4005 &   & 0.0907 &   \\ 
+  GSIs and professors should be better trained to help with mental health issues & 0.0084 & * & $<$0.0005 & * & 0.0731 &   & 0.5376 &   \\ 
+  How likely would you be to approach the Tang Center or other campus resources & 0.1337 &   & 0.0143 & * & 0.1376 &   & 0.321 &   \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
+
 
 \end{document}

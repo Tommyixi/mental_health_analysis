@@ -18,11 +18,9 @@
 TODO:
 
 \begin{itemize}
-\item add counts to tables
 \item signifiance to difference table
-\item fix 1D error things
-\item Chi-sq...choose which ones want to examine significant associations
-\item 1) sexual orientation 2) gender identity 3) ethnicity 4) where they live
+\item put question numbers on row names?
+\item clean up tables so they fit...
 \end{itemize}
 
 \section{Demographics}
@@ -65,8 +63,15 @@ xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
 #Function to make table
 maketable = function(dataframe, maxnum, options){
   df = dataframe[,which(sapply(dataframe, max, na.rm = TRUE) == maxnum)]
-  df_table = t(apply(df, 2, function(x)  prop.table(table(x, useNA = "always"))))
-  colnames(df_table) = options
+  if (is.null(dim(df))) {
+    df_table = as.vector(prop.table(table(df, useNA = "always")))
+    names(df_table) = options
+    df_table = t(data.frame(df_table))
+    rownames(df_table) = names(dataframe)[which(sapply(dataframe, max, na.rm = TRUE) == maxnum)]
+  } else {
+    df_table = t(apply(df, 2, function(x)  prop.table(table(x, useNA = "always"))))
+    colnames(df_table) = options
+  }
   return(print(xtable(df_table, digits = 3), rotate.colnames = TRUE))
 }
 @
@@ -214,10 +219,54 @@ names(cresources) = c("Resource awareness: UHS at the Tang Center: Counseling & 
                       "How likely would you be to approach the Tang Center or other campus resources")
 
 
-#names(cresources) = c("UHS at the Tang Center: Counseling & Psychological Services (CPS)","Tang Center CPS Satellite Counseling Services on campus","Nap spaces on campus","Peer Health Workers for IFC, PHC, Housing, Co-Op residents","Student-to-Student Peer Counseling","Tang Center Health Coaching","Confidential Care Advocates","CPS - A friend","CPS - Professor/GSI","CPS - Peer Support Organization","CPS - Flier","CPS - Email/Online Website","CPS - Other","CPS - Don't know/Don't remember","CPS campus Satellite Counseling Services - A friend","CPS campus Satellite Counseling Services - Professor/GSI","CPS campus Satellite Counseling Services - Peer Support Organization","CPS campus Satellite Counseling Services - Flier","CPS campus Satellite Counseling Services - Email/Online Website","CPS campus Satellite Counseling Services - Other","CPS campus Satellite Counseling Services - Don't know/Don't remember","Nap spaces on campus - A friend","Nap spaces on campus - Professor/GSI","Nap spaces on campus - Peer Support Organization","Nap spaces on campus - Flier","Nap spaces on campus - Email/Online Website","Nap spaces on campus - Other","Nap spaces on campus - Don't know/Don't remember","Peer Health Workers - A friend","Peer Health Workers - Professor/GSI","Peer Health Workers - Peer Support Organization","Peer Health Workers - Flier","Peer Health Workers - Email/Online Website","Peer Health Workers - Other","Peer Health Workers - Don't know/Don't remember","Student-to-Student Peer Counseling - A friend","Student-to-Student Peer Counseling - Professor/GSI","Student-to-Student Peer Counseling - Peer Support Organization","Student-to-Student Peer Counseling - Flier","Student-to-Student Peer Counseling - Email/Online Website","Student-to-Student Peer Counseling - Other","Student-to-Student Peer Counseling - Don't know/Don't remember","Tang Center Health Coaching - A friend","Tang Center Health Coaching - Professor/GSI","Tang Center Health Coaching - Peer Support Organization","Tang Center Health Coaching - Flier","Tang Center Health Coaching - Email/Online Website","Tang Center Health Coaching - Other","Tang Center Health Coaching - Don't know/Don't remember","Confidential Care Advocates - A friend","Confidential Care Advocates - Professor/GSI","Confidential Care Advocates - Peer Support Organization","Confidential Care Advocates - Flier","Confidential Care Advocates - Email/Online Website","Confidential Care Advocates - Other","Confidential Care Advocates - Don't know/Don't remember","Rate services: Counseling and Psychological Services","Rate services: Tang Center CPS Satellite Counseling Services on campus","Rate services: Nap spaces on campus","Rate services: Peer Health Workers","Rate services: Student-to-Student Peer Counseling","Rate services: Tang Center Health Coaching","Rate services: Confidential Care Advocates","Resource expansion: Counseling and Psychological Services (CPS)","Resource expansion: CPS Satellite Counseling Services on campus","Resource expansion: Nap spaces on campus","Resource expansion: Peer Health Workers","Resource expansion: Student-to-Student Peer Counseling","Resource expansion: Tang Center Health Coaching","Resource expansion: Confidential Care Advocates","Wait for mental health aid impedes on students use of these resources","Talk with GSI/professor about mental health and resources","Was information accurate, relevant and beneficial","GSIs and professors should be better trained to help with mental health issues","How likely would you be to approach the Tang Center or other campus resources")
+maketable(dataframe = cresources, maxnum = 3, options = c("I have not heard about until now", "I have heard about but have not used", "I have used this service", "NA"))
 
-maketable(dataframe = cresources, maxnum = 3, options = c("", "", "", "", ""))
+maketable(dataframe = cresources, maxnum = 1, options = c("No", "Yes", "NA"))
 
+maketable(dataframe = cresources, maxnum = 5, options = c("Very poor/Strongly disagree", "Poor/Slightly disagree", "Average/Neutral", "Good/Slightly agree", "Very Good/Strongly agree", "NA"))
+
+@
+
+
+\pagebreak
+\section{Inference}
+
+
+<<results = 'asis', warning = FALSE, echo = FALSE>>=
+compare_vars = MH[,c("ethn_shtdesc", "g01", "g02", "g03")]
+
+chi_table = function(dataframe){
+  
+  chi_dataframe = t(sapply(dataframe, function(x) sapply(compare_vars, function(y) c(ifelse(chisq.test(y, x)$p.value < 0.0005, "<0.0005", round(chisq.test(y, x)$p.value, 4)), ifelse(chisq.test(y, x)$p.value < 0.05, "*", " ")))))
+  colnames(chi_dataframe) = c("Ethn.", " ", "Gender", " ", "S. Orient", " ", "Living", " ")
+  return(print(xtable(chi_dataframe), scalebox='0.5'))
+  
+}
+@
+
+\pagebreak
+<<results = 'asis', warning = FALSE, echo = F>>=
+chi_table(genliving)
+@
+
+\pagebreak
+<<results = 'asis', warning = FALSE, echo = F>>=
+chi_table(sleepeat)
+@
+
+\pagebreak
+<<results = 'asis', warning = FALSE, echo = F>>=
+chi_table(mental)
+@
+
+\pagebreak
+<<results = 'asis', warning = FALSE, echo= F>>=
+chi_table(sexvio)
+@
+
+\pagebreak
+<<results = 'asis', warning = FALSE, echo = F>>=
+chi_table(cresources)
 @
 
 \end{document}

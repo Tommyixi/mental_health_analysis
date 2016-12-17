@@ -9,3 +9,4 @@
 \contentsline {subsection}{\numberline {2.4}Mental Well-being}{3}
 \contentsline {subsection}{\numberline {2.5}Sexual Violence}{3}
 \contentsline {subsection}{\numberline {2.6}Campus Resources}{3}
+\contentsline {section}{\numberline {3}Inference}{4}
