@@ -8,7 +8,9 @@ output: pdf_document
 # UC Berkeley Demographic
 ```{r, results = 'asis', echo = FALSE}
 library(knitr)
+library(xtable)
 
+MH = read.csv("Data/data.csv")
 berkeley_data = read.csv("berkeley_data.csv", header=TRUE, sep=',')
 kable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,])
 ```
@@ -19,10 +21,6 @@ kable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,])
 
 # Survey Demographic
 ```{r, results = 'asis', echo = FALSE}
-
-MH = read.csv("../data.csv")
-
-MH = read.csv("../data.csv")
 ethnicity_short_desc = MH[,grep("^ethn", names(MH))]
 ethnicity_short_desc_tabs = apply(ethnicity_short_desc, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
 lapply(ethnicity_short_desc_tabs[3], kable)
@@ -38,20 +36,22 @@ kable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
 ```
 
 # General Living
-```{r, results = 'asis', echo = FALSE}
+```{r, results = 'asis', echo = FALSE, tidy = TRUE}
 
 # General living
 genliving = MH[,grep("^a", names(MH))]
-genliving_tabs = apply(genliving, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
-names(genliving_tabs) = c("Life & Living conditions: The conditions of my life are excellent", "Life & Living conditions: I am satisfied with my life", "Life & Living conditions: I am satisfied with my living conditions", "Life & Living conditions: Where I live, I feel safe", "Health rating: Physical Health", "Health rating: Mental Health", "Financial: Confidence in financial situation", "Financial: Often cut back on important spending", "Financial: I have been concerned about money lately", "Aspects of Life: Academic life", "Aspects of Life: Social life", "Aspects of Life: Residential life")
-lapply(genliving_tabs, kable)
+names(genliving) = c("The conditions of my life are excellent", "I am satisfied with my life", "I am satisfied with my living conditions", "Where I live, I feel safe", "Physical Health", "Mental Health", "Confidence in financial situation", "Often cut back on important spending", "I have been concerned about money lately", "Academic life", "Social life", "Residential life")
 
-#aclife = MH[,grep("^b", names(MH))]
-#aclife_tabs = apply(aclife, 2, function(x) cbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
-#names(aclife_tabs) = c("I felt anxious")
-#lapply(aclife_tabs, kable)
 
-#MH_respond = MH[!is.na(MH$intro == 1),]
+
+genliving7 = genliving[,which(sapply(genliving, max, na.rm = TRUE) == 7)]
+genliving7_table = t(apply(genliving7, 2, function(x)  prop.table(table(x, useNA = "always"))))
+colnames(genliving7_table) = c("Strongly Disagree", "Disagree", "Slightly Disagree", "Neither", "Slightly Agree", "Agree", "Strongly Agree", "NA")
+
+genliving5 = genliving[,which(sapply(genliving, max, na.rm = TRUE) == 5)]
+genliving5_table = apply(genliving5, 2, function(x) rbind(Count = table(x, useNA = "always"), Proportion = prop.table(table(x, useNA = "always"))))
+rownames(genliving5_table) = c("Very Poor", " ", "Poor", " ", "Fair", " ", "Good", " ", "Very Good", " ", "NA", " ")
+kable(genliving5_table)
 ```
 
 # Academic Life
