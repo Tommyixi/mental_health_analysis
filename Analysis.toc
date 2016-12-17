@@ -8,5 +8,5 @@
 \contentsline {subsection}{\numberline {2.3}Sleeping and eating habits}{7}
 \contentsline {subsection}{\numberline {2.4}Mental Well-being}{8}
 \contentsline {subsection}{\numberline {2.5}Sexual Violence}{9}
-\contentsline {subsection}{\numberline {2.6}Campus Resources}{10}
-\contentsline {section}{\numberline {3}Inference}{11}
+\contentsline {subsection}{\numberline {2.6}Campus Resources}{11}
+\contentsline {section}{\numberline {3}Inference}{14}
