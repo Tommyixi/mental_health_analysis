@@ -24,7 +24,9 @@ TODO:
 \end{itemize}
 
 \section{Demographics}
+The following section compares the ethnic diversity of both the fall 2016 undergraduates at the Univeristy of California, Berkeley (UCB) with the profile of survey participants who completed the "Undergraduate Student Well-being Survey - 2016" (USWBS), as populated by the UCB.
 \subsection{UC Berkeley Demographics}
+Data representing the ethnic diversity of the fall 2016 undergradates at UCB.Information provided from the office of planning and development  (http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data).
 <<echo = FALSE, results = 'asis'>>=
 library(xtable)
 library(knitr)
@@ -38,11 +40,13 @@ print(xtable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,]), include.rownam
 
 \begin{itemize}
 \item Prop.F = Proportion Female, Prop.M = Proportion Male, Prop.D = Proportion Undefined, Prop.T = Proportion Total.
-\item Data from: http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data
 \item Note, underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
 \end{itemize}
 
+\newpage
+
 \subsection{Survey Demographics}
+Table represents the ethnicities for survey participants who completed the USWBS. Note  ethnic identies for participants was pre-populated via information on record with UCB prior to the survey being dispersed. Thus, information in this table \textbf{does not} reflect how individuals responded on the USWBS part 7, demographic information.
 <<results = 'asis', echo = FALSE>>=
 demotable = xtable(data.frame(Ethnicity = levels(MH$ethn_shtdesc), Count = as.numeric(table(MH$ethn_shtdesc)), Proportion = as.numeric(prop.table(table(MH$ethn_shtdesc)))))
 digits(demotable) <- c(2,2,0,4)
@@ -50,15 +54,36 @@ print(demotable, include.rownames = FALSE)
 @
 
 \subsection{UC Berkeley and survey comparison}
-
-FIGURE OUT SIGNIFICANCE HERE
+Table represents a comparison between the proportions reported by UCB and those individuals who completed the USWBS. Note, an asterisk (*) in the "Significance" column represents a significant difference between individuals in the fall 2016 undergraduate population at UCB and the conveience sample from USWBS.
 <<results = 'asis', echo = FALSE>>=
 berkeley_vs_survey_data = read.csv("berkeley_vs_survey.csv", header=TRUE, sep=',')
-xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
 
+num_participants = length(MH$status) # Should be 922, not hardcoding...
+num_berkeley = 29310 # Number of undergraduates within Berkeley fall 2016 demographic
+
+for(ethnicity in berkeley_vs_survey_data$Ethnicity ){
+  matrix_build = matrix(c(round(subset(berkeley_vs_survey_data, Ethnicity==ethnicity)[2] * num_berkeley)[1,], round(subset(berkeley_vs_survey_data, Ethnicity==ethnicity)[3] * num_participants)[1,], round((1 - (subset(berkeley_vs_survey_data, Ethnicity==ethnicity)[2])) * num_berkeley)[1,], round((1 - (subset(berkeley_vs_survey_data, Ethnicity==ethnicity)[3])) * num_participants)[1,]), nrow= 2, ncol=2)
+  p_value <- suppressWarnings(prop.test(matrix_build)$p.value)
+  if( is.na(p_value)){
+    berkeley_vs_survey_data$Significance[berkeley_vs_survey_data$Ethnicity==ethnicity] <-  "NA"
+  }else if (p_value < .05){
+    berkeley_vs_survey_data$Significance[berkeley_vs_survey_data$Ethnicity==ethnicity] <-  "*"
+  }else{
+    berkeley_vs_survey_data$Significance[berkeley_vs_survey_data$Ethnicity==ethnicity] <-  suppressWarnings(round(prop.test(matrix_build)$p.value, 4))
+  }
+  #berkeley_vs_survey_data$Significance[berkeley_vs_survey_data$Ethnicity==ethnicity] <- p_value
+}
+
+xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
 @
 
+Using an alpha level of .05, we observe that the population of fall 2016 undergraduates at UCB is sigificantly different from those who completed the USWBS. Significance was not reached within the "Japanese" and "Other Asian" categories. Thus, generalizing the following results to the undergraduate population of UCB may be unwise as the USWBS conveience sample appears to over-sample from underrepresented minority populations while under-sampling from the "White" ethnic group.
+
+
+\newpage
 \section{All results}
+The following section provides a breakdown of each of the questions asked and how participants responded. Sections are broken down into the various survey subject areas, including: general living, academic life, sleeping and eating habits, mental well-being, sexual violece, and campus resources.
+
 <<echo = FALSE>>=
 #Function to make table
 maketable = function(dataframe, maxnum, options){
@@ -77,6 +102,7 @@ maketable = function(dataframe, maxnum, options){
 @
 
 \subsection{General living}
+Questions pertaining to the "General Living" aspect of the survey. As noted on the survey, "The  [general living questions] will cover satisfaction with life as well as questions about how your financial situation affects your everyday life.  Please indicate your agreement with the statements below to the best of your ability."
 <<results = 'asis', echo = FALSE>>=
 genliving = MH[,grep("^a", names(MH))]
 
@@ -88,7 +114,10 @@ maketable(dataframe = genliving, maxnum = 5, options = c("Very Poor", "Poor", "F
 
 @
 
+\newpage
+
 \subsection{Academic Life}
+Questions pertaining to the "Academic Life" aspect of the survey. As noted on the survey, "The [academic life questions] will cover anxiety and academic stress.  We would like to learn more about how academics are affecting your levels of stress, and also how you have felt within the last month.  We would like to know how stress and anxiety is affecting you as it plays a large role in your general well-being."
 <<echo = FALSE, results = 'asis'>>=
 academic = MH[,grep("^b", names(MH))]
 names(academic) = c("Past week: I felt anxious and agitated", "	Past week: I felt stressed due to academic reasons", "Past week: My academic stress prevented me from maintaining my self-care", "Academics is the main reason I am stressed in my life", "I feel pressured by parents' expectations to succeed", "I feel pressured by my own expectations to succeed", "My stress impacts me more physically than mentally", "Univ. adequately provides support with academic stress", "I utilize campus resources for anxiety/academic stress")
@@ -99,8 +128,14 @@ maketable(dataframe = academic, maxnum = 7, options = c("Strongly Disagree", "Di
 maketable(dataframe = academic, maxnum = 3, options = c("Rarely or none of the time", "Some or a little of the time", "Occasionally or a moderate amount of the time", "All of the time", "NA"))
 @
 
-\subsection{Sleeping and eating habits}
+\newpage
 
+\subsection{Sleeping and eating habits}
+Questions pertaining to the "sleeping and eating habits" aspect of the survey. As noted on the survey, "
+The [sleeping and eating section] will cover sleeping and eating habits.  We would like to
+learn more about the quality and amount of sleep undergraduate students receive,
+as well as the extent to which they have access to and eat healthy food because
+sleep and diet are both essential elements of wellness."
 <<echo = FALSE, results = 'asis'>>=
 sleepeat = MH[,grep("^c", names(MH))]
 colnames(sleepeat) = c("Hours of sleep per day", "Sleep obstacles: Academics", "Sleep obstacles: Anxiety", "Sleep obstacles: Concerns about post-graduation", "Sleep obstacles: Finances", "Sleep obstacles: Living conditions", "Sleep obstacles: Social concerns", "Sleep obstacles: Something else (please specify)", "Sleep obstacles: Nothing - I am not being prevented from more sleep", "I am satisfied with the amount of sleep I usually receive", "The quality of my sleep is good", "The amount of sleep I receive makes me feel irritable", "The amount I sleep negatively affects my mental health", "I prioritize my academic performance above sleep", "I have a problem with daytime sleepiness", "I would benefit from naps during the day", "I eat health food that is good for my body", "I have easy access to places that sell healthy food", "I have easy access to affordable healthy food")
@@ -112,7 +147,15 @@ maketable(dataframe = sleepeat, maxnum = 7, options = c("Strongly Disagree", "Di
 maketable(dataframe = sleepeat, maxnum = 6, options = c("0-2", "3-4", "5-6", "7-8", "8-10", "10+", "NA")) #THIS ISNT WORKING
 @
 
+\newpage
+
 \subsection{Mental Well-being}
+Questions pertaining to the "Mental Well-being" aspect of the survey. As noted on the survey, "
+The [mental well-being section] of the survey will assess undergraduate students’ happiness
+and how they feel about life.  Some of the following questions are related to
+feelings of depression, and responses will be used to learn more about the
+wellness of the undergraduate population and shape what the campus can do to
+address it."
 <<echo = FALSE, results = 'asis'>>=
 mental = MH[,grep("^d", names(MH))]
 names(mental) = c("Past week: I felt depressed", "Past week: I felt hopeful about the future", "Past week: I felt happy with my life", "Past week: I felt alone and isolated", "Past week: I felt like it was hard to \``get up \" from lack of energy & motivation", "	Past week: I felt less interested in things I usually enjoy", "	Past week: I felt upset about the way my life was heading", "Past week: I felt like utilizing campus resources for mental distress", "Past week: I felt like a bad person", "Past week: I found it hard to focus on the positive aspects of life", "	In the past month I felt like utilizing campus resources for mental distress", "	Ever diagnosed with depression by a clinical professional")
@@ -123,7 +166,14 @@ maketable(dataframe = mental, maxnum = 1, options = c("No", "Yes", "NA")) #THIS 
 
 @
 
+\newpage
+
 \subsection{Sexual Violence}
+Questions pertaining to the "Sexual Violence" aspect of the survey. As noted on the survey, "The ASUC is committed to helping create a campus where sexual violence is not
+tolerated, where survivors are supported, and perpetrators are held accountable.
+The purpose of the [sexual violence section] is to identify the strengths and needs of our campus
+sexual violence prevention and response services. Feel free to answer all, some,
+or none of the questions."
 <<echo = FALSE, results= 'asis'>>=
 sexvio = MH[,grep("^e[0-9]", names(MH))]
 sexvio$e12 = NULL
@@ -131,7 +181,7 @@ names(sexvio) = c("Option to answer sexual violence prevention section", "UG Stu
 
 maketable(dataframe = sexvio, maxnum = 1, options = c("No", "Yes", "NA")) #Doesn't work
 
-maketable(dataframe = sexvio, maxnum = 10, options = c("1 = Not at all", " ", " ", " "," ", " "," ", " ", " ", "10 = Extremeley comfortable/effective and helpful", "NA")) 
+maketable(dataframe = sexvio, maxnum = 10, options = c("1 = Not at all", " ", " ", " "," ", " "," ", " ", " ", "10 = Completely comfortable/effective", "NA")) 
 
 maketable(dataframe = sexvio, maxnum = 4, options = c("Yes, for information only", "Yes, for support only", "Yes, for both information and support", "No, have not accessed", "NA"))
 
@@ -139,7 +189,15 @@ maketable(dataframe = sexvio, maxnum = 3, options = c("I did not have a need", "
 
 @
 
+\newpage
+
 \subsection{Campus Resources}
+Questions pertaining to the "Campus Resources" aspect of the survey. As noted on the survey, "The [campus resources section] of the survey will address to what extent you, as an
+undergraduate student, are aware of and utilize resources the University of
+California, Berkeley offers to improve student wellness.  Responses will be used
+to see what services are most effective and can be improved.  The following
+questions are about your knowledge and awareness of different campus-related
+mental health resources." 
 <<echo = FALSE, results = 'asis'>>=
 cresources = MH[,grep("^f", names(MH))]
 names(cresources) = c("Resource awareness: UHS at the Tang Center: Counseling & Psychological Services",
@@ -228,7 +286,7 @@ maketable(dataframe = cresources, maxnum = 5, options = c("Very poor/Strongly di
 @
 
 
-\pagebreak
+\newpage
 \section{Inference}
 
 
@@ -249,22 +307,22 @@ chi_table = function(dataframe){
 chi_table(genliving)
 @
 
-\pagebreak
+\newpage
 <<results = 'asis', warning = FALSE, echo = F>>=
 chi_table(sleepeat)
 @
 
-\pagebreak
+\newpage
 <<results = 'asis', warning = FALSE, echo = F>>=
 chi_table(mental)
 @
 
-\pagebreak
+\newpage
 <<results = 'asis', warning = FALSE, echo= F>>=
 chi_table(sexvio)
 @
 
-\pagebreak
+\newpage
 <<results = 'asis', warning = FALSE, echo = F>>=
 chi_table(cresources)
 @

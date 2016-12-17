@@ -74,9 +74,11 @@ TODO:
 \end{itemize}
 
 \section{Demographics}
+The following section compares the ethnic diversity of both the fall 2016 undergraduates at the Univeristy of California, Berkeley (UCB) with the profile of survey participants who completed the "Undergraduate Student Well-being Survey - 2016" (USWBS), as populated by the UCB.
 \subsection{UC Berkeley Demographics}
+Data representing the ethnic diversity of the fall 2016 undergradates at UCB.Information provided from the office of planning and development  (http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data).
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrrr}
@@ -107,13 +109,15 @@ African American/Black & 947 & 0.58 & 0.41 & 0.00 & 0.03 \\
 
 \begin{itemize}
 \item Prop.F = Proportion Female, Prop.M = Proportion Male, Prop.D = Proportion Undefined, Prop.T = Proportion Total.
-\item Data from: http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data
 \item Note, underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
 \end{itemize}
 
+\newpage
+
 \subsection{Survey Demographics}
+Table represents the ethnicities for survey participants who completed the USWBS. Note  ethnic identies for participants was pre-populated via information on record with UCB prior to the survey being dispersed. Thus, information in this table \textbf{does not} reflect how individuals responded on the USWBS part 7, demographic information.
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrr}
@@ -141,44 +145,50 @@ Ethnicity & Count & Proportion \\
 
 
 \subsection{UC Berkeley and survey comparison}
-
-FIGURE OUT SIGNIFICANCE HERE
+Table represents a comparison between the proportions reported by UCB and those individuals who completed the USWBS. Note, an asterisk (*) in the "Significance" column represents a significant difference between individuals in the fall 2016 undergraduate population at UCB and the conveience sample from USWBS.
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
-\begin{tabular}{rlrrr}
+\begin{tabular}{rlrrrl}
   \hline
- & Ethnicity & Berkeley\_Prop & Survey\_Prop & Difference \\ 
+ & Ethnicity & Berkeley\_Prop & Survey\_Prop & Difference & Significance \\ 
   \hline
-1 & African American/Black & 0.03 & 0.12 & -0.09 \\ 
-  2 & Mexican American/Chicano & 0.10 & 0.28 & -0.18 \\ 
-  3 & Other Hispanic/Latino & 0.04 & 0.10 & -0.06 \\ 
-  4 & Native American/Alaska Native & 0.01 & 0.02 & -0.02 \\ 
-  5 & Pacific Islander & 0.00 & 0.01 & -0.01 \\ 
-  6 & Chinese & 0.17 & 0.11 & 0.07 \\ 
-  7 & Filipino & 0.03 & 0.02 & 0.01 \\ 
-  8 & Japanese & 0.02 & 0.01 & 0.01 \\ 
-  9 & Korean & 0.05 & 0.03 & 0.02 \\ 
-  10 & Other Asian & 0.01 & 0.01 & 0.00 \\ 
-  11 & South Asian & 0.08 & 0.04 & 0.04 \\ 
-  12 & Vietnamese & 0.03 & 0.02 & 0.01 \\ 
-  13 & White & 0.26 & 0.15 & 0.11 \\ 
-  14 & Decline to State & 0.04 & 0.02 & 0.02 \\ 
-  15 & International & 0.14 & 0.07 & 0.06 \\ 
-  16 & Total & 1.00 & 1.00 & 0.00 \\ 
-  17 & Underrepresented Minority Subtotal & 0.18 & 0.52 & -0.34 \\ 
+1 & African American/Black & 0.03 & 0.12 & -0.09 & * \\ 
+  2 & Mexican American/Chicano & 0.10 & 0.28 & -0.18 & * \\ 
+  3 & Other Hispanic/Latino & 0.04 & 0.10 & -0.06 & * \\ 
+  4 & Native American/Alaska Native & 0.01 & 0.02 & -0.02 & * \\ 
+  5 & Pacific Islander & 0.00 & 0.01 & -0.01 & * \\ 
+  6 & Chinese & 0.17 & 0.11 & 0.07 & * \\ 
+  7 & Filipino & 0.03 & 0.02 & 0.01 & * \\ 
+  8 & Japanese & 0.02 & 0.01 & 0.01 & 0.0665 \\ 
+  9 & Korean & 0.05 & 0.03 & 0.02 & * \\ 
+  10 & Other Asian & 0.01 & 0.01 & 0.00 & 0.7828 \\ 
+  11 & South Asian & 0.08 & 0.04 & 0.04 & * \\ 
+  12 & Vietnamese & 0.03 & 0.02 & 0.01 & * \\ 
+  13 & White & 0.26 & 0.15 & 0.11 & * \\ 
+  14 & Decline to State & 0.04 & 0.02 & 0.02 & * \\ 
+  15 & International & 0.14 & 0.07 & 0.06 & * \\ 
+  16 & Total & 1.00 & 1.00 & 0.00 & NA \\ 
+  17 & Underrepresented Minority Subtotal & 0.18 & 0.52 & -0.34 & * \\ 
    \hline
 \end{tabular}
 \end{table}
 
 
+Using an alpha level of .05, we observe that the population of fall 2016 undergraduates at UCB is sigificantly different from those who completed the USWBS. Significance was not reached within the "Japanese" and "Other Asian" categories. Thus, generalizing the following results to the undergraduate population of UCB may be unwise as the USWBS conveience sample appears to over-sample from underrepresented minority populations while under-sampling from the "White" ethnic group.
+
+
+\newpage
 \section{All results}
+The following section provides a breakdown of each of the questions asked and how participants responded. Sections are broken down into the various survey subject areas, including: general living, academic life, sleeping and eating habits, mental well-being, sexual violece, and campus resources.
+
 
 
 \subsection{General living}
+Questions pertaining to the "General Living" aspect of the survey. As noted on the survey, "The  [general living questions] will cover satisfaction with life as well as questions about how your financial situation affects your everyday life.  Please indicate your agreement with the statements below to the best of your ability."
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrrr}
@@ -196,7 +206,7 @@ The conditions of my life are excellent & 0.057 & 0.093 & 0.107 & 0.115 & 0.228 
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrr}
@@ -213,9 +223,12 @@ Physical Health & 0.041 & 0.133 & 0.317 & 0.389 & 0.114 & 0.005 \\
 \end{table}
 
 
+\newpage
+
 \subsection{Academic Life}
+Questions pertaining to the "Academic Life" aspect of the survey. As noted on the survey, "The [academic life questions] will cover anxiety and academic stress.  We would like to learn more about how academics are affecting your levels of stress, and also how you have felt within the last month.  We would like to know how stress and anxiety is affecting you as it plays a large role in your general well-being."
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrrr}
@@ -232,7 +245,7 @@ Academics is the main reason I am stressed in my life & 0.020 & 0.070 & 0.065 & 
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrr}
@@ -247,10 +260,16 @@ Past week: I felt anxious and agitated & 0.114 & 0.280 & 0.311 & 0.266 & 0.029 \
 \end{table}
 
 
-\subsection{Sleeping and eating habits}
+\newpage
 
+\subsection{Sleeping and eating habits}
+Questions pertaining to the "sleeping and eating habits" aspect of the survey. As noted on the survey, "
+The [sleeping and eating section] will cover sleeping and eating habits.  We would like to
+learn more about the quality and amount of sleep undergraduate students receive,
+as well as the extent to which they have access to and eat healthy food because
+sleep and diet are both essential elements of wellness."
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrr}
@@ -269,7 +288,7 @@ Sleep obstacles: Academics & 0.182 & 0.774 & 0.043 \\
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrrr}
@@ -290,7 +309,7 @@ I am satisfied with the amount of sleep I usually receive & 0.114 & 0.145 & 0.14
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrr}
@@ -303,9 +322,17 @@ Hours of sleep per day & 0.002 & 0.065 & 0.418 & 0.389 & 0.070 & 0.010 & 0.046 \
 \end{table}
 
 
+\newpage
+
 \subsection{Mental Well-being}
+Questions pertaining to the "Mental Well-being" aspect of the survey. As noted on the survey, "
+The [mental well-being section] of the survey will assess undergraduate students’ happiness
+and how they feel about life.  Some of the following questions are related to
+feelings of depression, and responses will be used to learn more about the
+wellness of the undergraduate population and shape what the campus can do to
+address it."
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrr}
@@ -326,7 +353,7 @@ Past week: I felt depressed & 0.357 & 0.245 & 0.195 & 0.104 & 0.099 \\
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrr}
@@ -339,9 +366,16 @@ Past week: I felt depressed & 0.357 & 0.245 & 0.195 & 0.104 & 0.099 \\
 \end{table}
 
 
+\newpage
+
 \subsection{Sexual Violence}
+Questions pertaining to the "Sexual Violence" aspect of the survey. As noted on the survey, "The ASUC is committed to helping create a campus where sexual violence is not
+tolerated, where survivors are supported, and perpetrators are held accountable.
+The purpose of the [sexual violence section] is to identify the strengths and needs of our campus
+sexual violence prevention and response services. Feel free to answer all, some,
+or none of the questions."
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrr}
@@ -353,12 +387,12 @@ Option to answer sexual violence prevention section & 0.367 & 0.533 & 0.101 \\
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:47 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrrrrrrr}
   \hline
- & \begin{sideways} 1 = Not at all \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways} 10 = Extremeley comfortable/effective and helpful \end{sideways} & \begin{sideways} NA \end{sideways} \\ 
+ & \begin{sideways} 1 = Not at all \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways}   \end{sideways} & \begin{sideways} 10 = Completely comfortable/effective \end{sideways} & \begin{sideways} NA \end{sideways} \\ 
   \hline
 UG Student Well-Being Survey & 0.042 & 0.052 & 0.052 & 0.052 & 0.053 & 0.054 & 0.073 & 0.066 & 0.029 & 0.051 & 0.475 \\ 
   Sexual assault and harassment & 0.050 & 0.017 & 0.028 & 0.018 & 0.064 & 0.054 & 0.051 & 0.060 & 0.021 & 0.023 & 0.614 \\ 
@@ -369,7 +403,7 @@ UG Student Well-Being Survey & 0.042 & 0.052 & 0.052 & 0.052 & 0.053 & 0.054 & 0
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:48 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrr}
@@ -389,7 +423,7 @@ Tang medical services & 0.053 & 0.011 & 0.025 & 0.422 & 0.489 \\
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:48 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrr}
@@ -402,9 +436,17 @@ Why haven't used services for information or support about sexual violence & 0.2
 \end{table}
 
 
+\newpage
+
 \subsection{Campus Resources}
+Questions pertaining to the "Campus Resources" aspect of the survey. As noted on the survey, "The [campus resources section] of the survey will address to what extent you, as an
+undergraduate student, are aware of and utilize resources the University of
+California, Berkeley offers to improve student wellness.  Responses will be used
+to see what services are most effective and can be improved.  The following
+questions are about your knowledge and awareness of different campus-related
+mental health resources." 
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:48 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrr}
@@ -422,7 +464,7 @@ Resource awareness: UHS at the Tang Center: Counseling \& Psychological Services
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:48 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrr}
@@ -491,7 +533,7 @@ How hear about: CPS - A friend & 0.562 & 0.248 & 0.190 \\
 \end{tabular}
 \end{table}
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:27 2016
+% Fri Dec 16 21:52:48 2016
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrrrr}
@@ -514,7 +556,7 @@ Rate services: Counseling and Psychological Services & 0.017 & 0.016 & 0.079 & 0
 
 
 
-\pagebreak
+\newpage
 \section{Inference}
 
 
@@ -522,7 +564,7 @@ Rate services: Counseling and Psychological Services & 0.017 & 0.016 & 0.079 & 0
 
 \pagebreak
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:28 2016
+% Fri Dec 16 21:52:48 2016
 \begin{table}[ht]
 \centering
 \scalebox{0.5}{
@@ -548,9 +590,9 @@ The conditions of my life are excellent & 0.0542 &   & 7e-04 & * & 0.1516 &   & 
 \end{table}
 
 
-\pagebreak
+\newpage
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:28 2016
+% Fri Dec 16 21:52:48 2016
 \begin{table}[ht]
 \centering
 \scalebox{0.5}{
@@ -583,9 +625,9 @@ Hours of sleep per day & 0.2046 &   & 0.0027 & * & 0.1527 &   & 0.144 &   \\
 \end{table}
 
 
-\pagebreak
+\newpage
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:28 2016
+% Fri Dec 16 21:52:48 2016
 \begin{table}[ht]
 \centering
 \scalebox{0.5}{
@@ -611,9 +653,9 @@ Past week: I felt depressed & 0.2821 &   & 0.0011 & * & $<$0.0005 & * & 0.0175 &
 \end{table}
 
 
-\pagebreak
+\newpage
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:28 2016
+% Fri Dec 16 21:52:49 2016
 \begin{table}[ht]
 \centering
 \scalebox{0.5}{
@@ -643,9 +685,9 @@ Option to answer sexual violence prevention section & $<$0.0005 & * & $<$0.0005 
 \end{table}
 
 
-\pagebreak
+\newpage
 % latex table generated in R 3.3.1 by xtable 1.8-2 package
-% Fri Dec 16 17:59:29 2016
+% Fri Dec 16 21:52:50 2016
 \begin{table}[ht]
 \centering
 \scalebox{0.5}{
