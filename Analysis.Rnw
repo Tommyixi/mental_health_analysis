@@ -18,15 +18,13 @@
 TODO:
 
 \begin{itemize}
-\item signifiance to difference table
 \item put question numbers on row names?
-\item clean up tables so they fit...
 \end{itemize}
 
 \section{Demographics}
-The following section compares the ethnic diversity of both the fall 2016 undergraduates at the Univeristy of California, Berkeley (UCB) with the profile of survey participants who completed the "Undergraduate Student Well-being Survey - 2016" (USWBS), as populated by the UCB.
+The following section compares the ethnic diversity of the Fall 2016 undergraduates at the Univeristy of California, Berkeley (UCB) with the profile of survey participants who completed the ``Undergraduate Student Well-being Survey - 2016" (USWBS), as populated by the UCB.
 \subsection{UC Berkeley Demographics}
-Data representing the ethnic diversity of the fall 2016 undergradates at UCB. Information provided from the office of planning and development  (http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data).
+
 <<echo = FALSE, results = 'asis'>>=
 library(xtable)
 library(knitr)
@@ -35,26 +33,26 @@ MH = read.csv("Data/data.csv")
 MH[,grep(pattern = "text$", names(MH))] = NULL
 MH = MH[MH$status == 1 | MH$status == 2,]
 berkeley_data = read.csv("berkeley_data.csv", header=TRUE, sep=',')
-print(xtable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,]), include.rownames = FALSE)
+colnames(berkeley_data) = c("Ethnicity", "Count", "Prop. Female", "Prop. Male", "Prop. Undefined","Prop. Total")
+print(xtable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,], caption = "Data representing the ethnic diversity of the Fall 2016 undergradates at UCB. Information provided from the office of planning and development  (http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data)."), include.rownames = FALSE)
 @
 
-\begin{itemize}
-\item Prop.F = Proportion Female, Prop.M = Proportion Male, Prop.D = Proportion Undefined, Prop.T = Proportion Total.
-\item Note, underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
-\end{itemize}
+This table was made to compare with the survey demographics, on the next page. Note: underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
 
 \pagebreak
 
 \subsection{Survey Demographics}
-Table represents the ethnicities for survey participants who completed the USWBS. Note, ethnicities for participants was pre-populated via information on record with UCB prior to the survey being dispersed. Information in this table \textbf{does not} reflect individual responses on the USWBS part 7, demographic information.
+ 
 <<results = 'asis', echo = FALSE>>=
-demotable = xtable(data.frame(Ethnicity = levels(MH$ethn_shtdesc), Count = as.numeric(table(MH$ethn_shtdesc)), Proportion = as.numeric(prop.table(table(MH$ethn_shtdesc)))))
+demotable = xtable(data.frame(Ethnicity = levels(MH$ethn_shtdesc), Count = as.numeric(table(MH$ethn_shtdesc)), Proportion = as.numeric(prop.table(table(MH$ethn_shtdesc)))), caption = "Ethnicities for survey participants who completed the USWBS.")
 digits(demotable) <- c(2,2,0,4)
 print(demotable, include.rownames = FALSE)
 @
 
-\subsection{UC Berkeley and survey comparison}
-Table represents a comparison between the proportions reported by UCB and those individuals who completed the USWBS. Note, an asterisk (*) in the "Significance" column represents a significant difference between individuals in the fall 2016 undergraduate population at UCB and the conveience sample from USWBS.
+Note: ethnicities for participants was pre-populated via information on record with UCB prior to the survey being dispersed. Information in this table \textbf{does not} reflect individual responses on the USWBS part 7, demographic information.
+
+\subsection{UC Berkeley and USWBS demographic comparison}
+
 <<results = 'asis', echo = FALSE>>=
 berkeley_vs_survey_data = read.csv("berkeley_vs_survey.csv", header=TRUE, sep=',')
 
@@ -74,15 +72,17 @@ for(ethnicity in berkeley_vs_survey_data$Ethnicity ){
   #berkeley_vs_survey_data$Significance[berkeley_vs_survey_data$Ethnicity==ethnicity] <- p_value
 }
 
-xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,])
+print(xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,], caption = "Comparison between the proportions reported by UCB and those individuals who completed the USWBS. An asterisk (*) in the Significance column represents a significant difference between individuals in the Fall 2016 undergraduate population at UCB and the convenience sample from USWBS."), include.rownames = FALSE)
 @
 
-Using an alpha level of .05, we observe that the population of fall 2016 undergraduates at UCB is sigificantly different from those who completed the USWBS. Significance was not reached within the "Japanese" and "Other Asian" categories. Thus, generalizing the following results to the undergraduate population of UCB may be unwise as the USWBS conveience sample appears to over-sample from underrepresented minority populations while under-sampling from the "White" ethnic group.
+Using an $\alpha$ level of .05, we observe that the population of Fall 2016 undergraduates at UCB is mostly sigificantly different from those who completed the USWBS. Significance was not reached within the ``Japanese" and ``Other Asian" categories. Thus, generalizing the following results to the undergraduate population of UCB may be unwise as the USWBS convenience sample appears to over-sample from underrepresented minority populations while under-sampling from the ``White" ethnic group.
 
 
 \pagebreak
-\section{All results}
-The following section provides a breakdown of each of the questions asked and how participants responded. Sections are broken down into the various survey subject areas: general living, academic life, sleeping and eating habits, mental well-being, sexual violece, and campus resources.
+\section{Descriptive statistics}
+The following section provides a breakdown of each of the questions asked and how participants responded. The following proportions were derived \textbf{only from participants who answered at least question}. Thus, for all proceeding questions the N = 922 (i.e., all proportions can be multipled by 922 to obtain the counts for each answer).
+
+Sections are broken down into the various survey subject areas: general living, academic life, sleeping and eating habits, mental well-being, sexual violece, and campus resources. The last column is always ``NA," which is the proportion of people who did not answer the question from the pool of people who answered at least one question.
 
 <<echo = FALSE>>=
 #Function to make table
@@ -102,11 +102,11 @@ maketable = function(dataframe, maxnum, options, scalebox = 1){
 @
 
 \subsection{General living}
-Questions pertaining to the "General Living" aspect of the survey. As noted on the survey, "The  [general living questions] will cover satisfaction with life as well as questions about how your financial situation affects your everyday life.  Please indicate your agreement with the statements below to the best of your ability."
+Questions pertaining to the ``General Living" aspect of the survey. As noted on the survey, ``The  [general living questions] will cover satisfaction with life as well as questions about how your financial situation affects your everyday life.  Please indicate your agreement with the statements below to the best of your ability."
 <<results = 'asis', echo = FALSE>>=
 genliving = MH[,grep("^a", names(MH))]
 
-names(genliving) = c("The conditions of my life are excellent", "I am satisfied with my life", "I am satisfied with my living conditions", "Where I live, I feel safe", "Physical Health", "Mental Health", "I am confident about my financial situation.", "Often cut back on important spending", "I have been concerned about money lately", "Satisfaction with academic life", "Satisfaction with social life", "Satisfaction with residential life")
+names(genliving) = paste(names(genliving), c("The conditions of my life are excellent", "I am satisfied with my life", "I am satisfied with my living conditions", "Where I live, I feel safe", "Physical Health", "Mental Health", "I am confident about my financial situation", "Often cut back on important spending", "I have been concerned about money lately", "Satisfaction with academic life", "Satisfaction with social life", "Satisfaction with residential life"))
 
 maketable(dataframe = genliving, maxnum = 7, options = c("Strongly Disagree", "Disagree", "Slightly Disagree", "Neither", "Slightly Agree", "Agree", "Strongly Agree", "NA"))
 
@@ -117,10 +117,10 @@ maketable(dataframe = genliving, maxnum = 5, options = c("Very Poor", "Poor", "F
 \pagebreak
 
 \subsection{Academic Life}
-Questions pertaining to the "Academic Life" aspect of the survey. As noted on the survey, "The [academic life questions] will cover anxiety and academic stress.  We would like to learn more about how academics are affecting your levels of stress, and also how you have felt within the last month.  We would like to know how stress and anxiety is affecting you as it plays a large role in your general well-being."
+Following are questions pertaining to the "Academic Life" aspect of the survey. As noted on the survey, "The [academic life questions] will cover anxiety and academic stress.  We would like to learn more about how academics are affecting your levels of stress, and also how you have felt within the last month.  We would like to know how stress and anxiety is affecting you as it plays a large role in your general well-being."
 <<echo = FALSE, results = 'asis'>>=
 academic = MH[,grep("^b", names(MH))]
-names(academic) = c("Past week: I felt anxious and agitated", "	Past week: I felt stressed due to academic reasons", "Past week: My academic stress prevented me from maintaining my self-care", "Academics is the main reason I am stressed in my life", "I feel pressured by parents' expectations to succeed", "I feel pressured by my own expectations to succeed", "My stress impacts me more physically than mentally", "Univ. adequately provides support with academic stress", "I utilize campus resources for anxiety/academic stress")
+names(academic) = paste(names(academic), c("Past week: I felt anxious and agitated", "	Past week: I felt stressed due to academic reasons", "Past week: My academic stress prevented me from maintaining my self-care", "Academics is the main reason I am stressed in my life", "I feel pressured by parents' expectations to succeed", "I feel pressured by my own expectations to succeed", "My stress impacts me more physically than mentally", "Univ. adequately provides support with academic stress", "I utilize campus resources for anxiety/academic stress"))
 
 maketable(dataframe = academic, maxnum = 7, options = c("Strongly Disagree", "Disagree", "Slightly Disagree", "Neither", "Slightly Agree", "Agree", "Strongly Agree", "NA"))
 
@@ -131,34 +131,29 @@ maketable(dataframe = academic, maxnum = 3, options = c("Rarely or none of the t
 \pagebreak
 
 \subsection{Sleeping and eating habits}
-Questions pertaining to the "sleeping and eating habits" aspect of the survey. As noted on the survey, "
-The [sleeping and eating section] will cover sleeping and eating habits.  We would like to
-learn more about the quality and amount of sleep undergraduate students receive,
-as well as the extent to which they have access to and eat healthy food because
+Questions pertaining to the "sleeping and eating habits" aspect of the survey. As noted on the survey, ''The [sleeping and eating section] will cover sleeping and eating habits.  We would like to learn more about the quality and amount of sleep undergraduate students receive, as well as the extent to which they have access to and eat healthy food because
 sleep and diet are both essential elements of wellness."
 <<echo = FALSE, results = 'asis'>>=
 sleepeat = MH[,grep("^c", names(MH))]
-colnames(sleepeat) = c("Hours of sleep per day", "Sleep obstacles: Academics", "Sleep obstacles: Anxiety", "Sleep obstacles: Concerns about post-graduation", "Sleep obstacles: Finances", "Sleep obstacles: Living conditions", "Sleep obstacles: Social concerns", "Sleep obstacles: Something else (please specify)", "Sleep obstacles: Nothing - I am not being prevented from more sleep", "I am satisfied with the amount of sleep I usually receive", "The quality of my sleep is good", "The amount of sleep I receive makes me feel irritable", "The amount I sleep negatively affects my mental health", "I prioritize my academic performance above sleep", "I have a problem with daytime sleepiness", "I would benefit from naps during the day", "I eat health food that is good for my body", "I have easy access to places that sell healthy food", "I have easy access to affordable healthy food")
+colnames(sleepeat) = paste(names(sleepeat),c("Hours of sleep per day", "Sleep obstacles: Academics", "Sleep obstacles: Anxiety", "Sleep obstacles: Concerns about post-graduation", "Sleep obstacles: Finances", "Sleep obstacles: Living conditions", "Sleep obstacles: Social concerns", "Sleep obstacles: Something else (please specify)", "Sleep obstacles: Nothing - I am not being prevented from more sleep", "I am satisfied with the amount of sleep I usually receive", "The quality of my sleep is good", "The amount of sleep I receive makes me feel irritable", "The amount I sleep negatively affects my mental health", "I prioritize my academic performance above sleep", "I have a problem with daytime sleepiness", "I would benefit from naps during the day", "I eat health food that is good for my body", "I have easy access to places that sell healthy food", "I have easy access to affordable healthy food"))
 
 maketable(dataframe = sleepeat, maxnum = 1, options = c("No ", "Yes ", "NA "))
 
 maketable(dataframe = sleepeat, maxnum = 7, options = c("Strongly Disagree", "Disagree", "Slightly Disagree", "Neither", "Slightly Agree", "Agree", "Strongly Agree", "NA"))
 
-maketable(dataframe = sleepeat, maxnum = 6, options = c("0-2", "3-4", "5-6", "7-8", "8-10", "10+", "NA")) #THIS ISNT WORKING
+maketable(dataframe = sleepeat, maxnum = 6, options = c("0-2", "3-4", "5-6", "7-8", "8-10", "10+", "NA"))
 @
 
 \pagebreak
 
 \subsection{Mental Well-being}
-Questions pertaining to the "Mental Well-being" aspect of the survey. As noted on the survey, "
-The [mental well-being section] of the survey will assess undergraduate students’ happiness
-and how they feel about life.  Some of the following questions are related to
+Questions pertaining to the ``Mental Well-being" aspect of the survey. As noted on the survey, ``The [mental well-being section] of the survey will assess undergraduate students’ happiness and how they feel about life.  Some of the following questions are related to
 feelings of depression, and responses will be used to learn more about the
 wellness of the undergraduate population and shape what the campus can do to
 address it."
 <<echo = FALSE, results = 'asis'>>=
 mental = MH[,grep("^d", names(MH))]
-names(mental) = c("Past week: I felt depressed", "Past week: I felt hopeful about the future", "Past week: I felt happy with my life", "Past week: I felt alone and isolated", "Past week: I felt like it was hard to \``get up \" from lack of energy & motivation", "	Past week: I felt less interested in things I usually enjoy", "	Past week: I felt upset about the way my life was heading", "Past week: I felt like utilizing campus resources for mental distress", "Past week: I felt like a bad person", "Past week: I found it hard to focus on the positive aspects of life", "	In the past month I felt like utilizing campus resources for mental distress", "	Ever diagnosed with depression by a clinical professional")
+names(mental) = paste(names(mental), c("Past week: I felt depressed", "Past week: I felt hopeful about the future", "Past week: I felt happy with my life", "Past week: I felt alone and isolated", "Past week: I felt like it was hard to \``get up \" from lack of energy & motivation", "	Past week: I felt less interested in things I usually enjoy", "	Past week: I felt upset about the way my life was heading", "Past week: I felt like utilizing campus resources for mental distress", "Past week: I felt like a bad person", "Past week: I found it hard to focus on the positive aspects of life", "	In the past month I felt like utilizing campus resources for mental distress", "	Ever diagnosed with depression by a clinical professional"))
 
 maketable(dataframe = mental, maxnum = 3, options = c("Rarely or none of the time", "Some or a little of the time", "Occasionally or a moderate amount of the time", "All of the time", "NA"))
 
@@ -169,15 +164,14 @@ maketable(dataframe = mental, maxnum = 1, options = c("No", "Yes", "NA")) #THIS 
 \pagebreak
 
 \subsection{Sexual Violence}
-Questions pertaining to the "Sexual Violence" aspect of the survey. As noted on the survey, "The ASUC is committed to helping create a campus where sexual violence is not
+Questions pertaining to the ``Sexual Violence" aspect of the survey. As noted on the survey, ``The ASUC is committed to helping create a campus where sexual violence is not
 tolerated, where survivors are supported, and perpetrators are held accountable.
-The purpose of the [sexual violence section] is to identify the strengths and needs of our campus
-sexual violence prevention and response services. Feel free to answer all, some,
+The purpose of the [sexual violence section] is to identify the strengths and needs of our campus sexual violence prevention and response services. Feel free to answer all, some,
 or none of the questions."
 <<echo = FALSE, results= 'asis'>>=
 sexvio = MH[,grep("^e[0-9]", names(MH))]
 sexvio$e12 = NULL
-names(sexvio) = c("Option to answer sexual violence prevention section", "UG Student Well-Being Survey", "Tang medical services", "Tang social services", "Confidential CARE advocates", "Title IX office/OPHD", "EOP counselors", "Resident Assistant/Resident Director", "Sexual Assault Commission/Cal Consent Campaign", "UCPD" , "Other", "Why haven't used services for information or support about sexual violence", "Sexual assault and harassment", "Mental health", "Maintaining a balanced lifestyle", "Alcohol use")
+names(sexvio) = paste(names(sexvio),c("Option to answer sexual violence prevention section", "UG Student Well-Being Survey", "Tang medical services", "Tang social services", "Confidential CARE advocates", "Title IX office/OPHD", "EOP counselors", "Resident Assistant/Resident Director", "Sexual Assault Commission/Cal Consent Campaign", "UCPD" , "Other", "Why haven't used services for information or support about sexual violence", "Sexual assault and harassment", "Mental health", "Maintaining a balanced lifestyle", "Alcohol use"))
 
 maketable(dataframe = sexvio, maxnum = 1, options = c("No", "Yes", "NA")) #Doesn't work
 
@@ -200,13 +194,13 @@ questions are about your knowledge and awareness of different campus-related
 mental health resources." 
 <<echo = FALSE, results = 'asis'>>=
 cresources = MH[,grep("^f", names(MH))]
-names(cresources) = c("Resource awareness: UHS at the Tang Center: Counseling & Psychological Services",
-                      "Resource awareness: Tang Center CPS Satellite Counseling Services on campus",
-                      "Resource awareness: Nap spaces on campus",
-                      "Resource awareness: Peer Health Workers for IFC, PHC, Housing, Co-Op residents",
-                      "Resource awareness: Student-to-Student Peer Counseling",
-                      "Resource awareness: Tang Center Health Coaching",
-                      "Resource awareness: Confidential Care Advocates",
+names(cresources) = paste(names(cresources),c("UHS at the Tang Center: Counseling & Psychological Services",
+                      "Tang Center CPS Satellite Counseling Services on campus",
+                      "Nap spaces on campus",
+                      "Peer Health Workers for IFC, PHC, Housing, Co-Op residents",
+                      "Student-to-Student Peer Counseling",
+                      "Tang Center Health Coaching",
+                      "Confidential Care Advocates",
                       "How hear about: CPS - A friend",
                       "How hear about: CPS - Professor/GSI",
                       "How hear about: CPS - Peer Support Organization",
@@ -274,14 +268,14 @@ names(cresources) = c("Resource awareness: UHS at the Tang Center: Counseling & 
                       "Talk with GSI/professor about mental health and resources",
                       "Was information accurate, relevant and beneficial",
                       "GSIs and professors should be better trained to help with mental health issues",
-                      "How likely would you be to approach the Tang Center or other campus resources")
+                      "How likely would you be to approach the Tang Center or other campus resources"))
 
 
 maketable(dataframe = cresources, maxnum = 3, options = c("I have not heard about until now", "I have heard about but have not used", "I have used this service", "NA"))
 
-maketable(dataframe = cresources, maxnum = 1, options = c("No", "Yes", "NA"), scalebox = .75)
+maketable(dataframe = cresources, maxnum = 1, options = c("No", "Yes", "NA"), scalebox = .85)
 
-maketable(dataframe = cresources, maxnum = 5, options = c("Very poor/Strongly disagree", "Poor/Slightly disagree", "Average/Neutral", "Good/Slightly agree", "Very Good/Strongly agree", "NA"))
+maketable(dataframe = cresources, maxnum = 5, options = c("Very poor/Strongly disagree", "Poor/Slightly disagree", "Average/Neutral", "Good/Slightly agree", "Very Good/Strongly agree", "NA"), scalebox = .9)
 
 @
 
@@ -289,36 +283,42 @@ maketable(dataframe = cresources, maxnum = 5, options = c("Very poor/Strongly di
 
 \section{Inference}
 
+The following tables denote, for each of the above sections, whether or not there is an association between ethnicity, gender, sexual orientation, or living status versus all of the questions in the previous sections. $\chi^2$ tests were done to assess significance of associations at the $\alpha = 0.05$ level. For example, in the table immediately below, there is an asterisk at ``I am confident about my financial situation" and "Ethnicity." This means there is a significant association between satisfaction of living conditions and ethicity. All p-values were adjusted for multiple comparisons using the bonferroni correction.
+
 <<results = 'asis', warning = FALSE, echo = FALSE>>=
 compare_vars = MH[,c("ethn_shtdesc", "g01", "g02", "g03")]
 
-chi_table = function(dataframe){
+chi_table = function(dataframe, scalebox = 1, caption){
   
-  chi_dataframe = t(sapply(dataframe, function(x) sapply(compare_vars, function(y) c(ifelse(chisq.test(y, x)$p.value < 0.0005, "<0.0005", round(chisq.test(y, x)$p.value, 4)), ifelse(chisq.test(y, x)$p.value < 0.05, "*", " ")))))
+  chi_dataframe = t(sapply(dataframe, function(x) sapply(compare_vars, function(y) c(ifelse(chisq.test(y, x)$p.value*dim(dataframe)[2] < 0.0005, "<0.0005", ifelse(chisq.test(y, x)$p.value*dim(dataframe)[2] > 1, 1, round(chisq.test(y, x)$p.value*dim(dataframe)[2], 4))), ifelse(chisq.test(y, x)$p.value*dim(dataframe)[2] < 0.05, "*", " ")))))
   colnames(chi_dataframe) = c("Ethn.", " ", "Gender", " ", "S. Orient", " ", "Living", " ")
-  return(print(xtable(chi_dataframe), scalebox='0.75'))
+  return(print(xtable(chi_dataframe, caption = caption), scalebox=scalebox))
   
 }
 @
 
 <<results = 'asis', warning = FALSE, echo = F>>=
-chi_table(genliving)
+chi_table(genliving, caption = "Table of p-values and significance for General Living section")
 @
 
 <<results = 'asis', warning = FALSE, echo = F>>=
-chi_table(sleepeat)
+chi_table(academic, scalebox = .85, caption = "Table of p-values and significance for Academic life section")
 @
 
 <<results = 'asis', warning = FALSE, echo = F>>=
-chi_table(mental)
+chi_table(sleepeat, scalebox = .85, caption = "Table of p-values and significance for Sleeping and eating habits section")
+@
+
+<<results = 'asis', warning = FALSE, echo = F>>=
+chi_table(mental, 0.85, caption = "Table of p-values and significance for Mental well-being section")
 @
 
 <<results = 'asis', warning = FALSE, echo= F>>=
-chi_table(sexvio)
+chi_table(sexvio, 0.85, caption = "Table of p-values and significance for Sexual violence section")
 @
 
 <<results = 'asis', warning = FALSE, echo = F>>=
-chi_table(cresources)
+chi_table(cresources, scalebox = 0.75, caption = "Table of p-values and significance for Campus Resources section")
 @
 
 \end{document}
