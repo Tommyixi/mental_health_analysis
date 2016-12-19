@@ -15,14 +15,8 @@
 
 \pagebreak
 
-TODO:
-
-\begin{itemize}
-\item put question numbers on row names?
-\end{itemize}
-
 \section{Demographics}
-The following section compares the ethnic diversity of the Fall 2016 undergraduates at the Univeristy of California, Berkeley (UCB) with the profile of survey participants who completed the ``Undergraduate Student Well-being Survey - 2016" (USWBS), as populated by the UCB.
+The following section compares the ethnic diversity of the Fall 2016 undergraduates at the University of California, Berkeley (UCB) with the profile of survey participants who completed the ``Undergraduate Student Well-being Survey - 2016" (USWBS), as populated by the UCB.
 \subsection{UC Berkeley Demographics}
 
 <<echo = FALSE, results = 'asis'>>=
@@ -37,19 +31,19 @@ colnames(berkeley_data) = c("Ethnicity", "Count", "Prop. Female", "Prop. Male", 
 print(xtable(berkeley_data[rowSums(is.na(berkeley_data)) == 0,], caption = "Data representing the ethnic diversity of the Fall 2016 undergradates at UCB. Information provided from the office of planning and development  (http://opa.berkeley.edu/uc-berkeley-fall-enrollment-data)."), include.rownames = FALSE)
 @
 
-This table was made to compare with the survey demographics, on the next page. Note: underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
+This table was made in order to make a comparison with the survey demographics (Table 2). Note: underrepresented groups are defined as African American, Chicano/Latino, and Native American/Alaska Native.
 
 \pagebreak
 
 \subsection{Survey Demographics}
  
 <<results = 'asis', echo = FALSE>>=
-demotable = xtable(data.frame(Ethnicity = levels(MH$ethn_shtdesc), Count = as.numeric(table(MH$ethn_shtdesc)), Proportion = as.numeric(prop.table(table(MH$ethn_shtdesc)))), caption = "Ethnicities for survey participants who completed the USWBS.")
+demotable = xtable(data.frame(Ethnicity = levels(MH$ethn_shtdesc), Count = as.numeric(table(MH$ethn_shtdesc)), Proportion = as.numeric(prop.table(table(MH$ethn_shtdesc)))), caption = "Ethnicity for survey participants who completed the USWBS.")
 digits(demotable) <- c(2,2,0,4)
 print(demotable, include.rownames = FALSE)
 @
 
-Note: ethnicities for participants was pre-populated via information on record with UCB prior to the survey being dispersed. Information in this table \textbf{does not} reflect individual responses on the USWBS part 7, demographic information.
+Note: ethnicity for participants was pre-populated via information on record with UCB prior to the survey being dispersed. Information in this table \textbf{does not} reflect individual responses on the USWBS part 7, demographic information.
 
 \subsection{UC Berkeley and USWBS demographic comparison}
 
@@ -75,14 +69,14 @@ for(ethnicity in berkeley_vs_survey_data$Ethnicity ){
 print(xtable(berkeley_vs_survey_data[rowSums(is.na(berkeley_data)) == 0,], caption = "Comparison between the proportions reported by UCB and those individuals who completed the USWBS. An asterisk (*) in the Significance column represents a significant difference between individuals in the Fall 2016 undergraduate population at UCB and the convenience sample from USWBS."), include.rownames = FALSE)
 @
 
-Using an $\alpha$ level of .05, we observe that the population of Fall 2016 undergraduates at UCB is mostly sigificantly different from those who completed the USWBS. Significance was not reached within the ``Japanese" and ``Other Asian" categories. Thus, generalizing the following results to the undergraduate population of UCB may be unwise as the USWBS convenience sample appears to over-sample from underrepresented minority populations while under-sampling from the ``White" ethnic group.
+Using an $\alpha$ level of .05, we observe that the population of Fall 2016 undergraduates at UCB is mostly significantly different from those who completed the USWBS. Significance was not reached within the ``Japanese" and ``Other Asian" categories. Thus, generalizing the USWBS results to the undergraduate population of UCB may be unwise as the USWBS convenience sample appears to over-sample from underrepresented minority populations while under-sampling from other ethnic groups (such as``White", for example).
 
 
 \pagebreak
 \section{Descriptive statistics}
-The following section provides a breakdown of each of the questions asked and how participants responded. The following proportions were derived \textbf{only from participants who answered at least question}. Thus, for all proceeding questions the N = 922 (i.e., all proportions can be multipled by 922 to obtain the counts for each answer).
+The following section provides a breakdown of each of the questions asked and how participants responded. The following proportions were derived \textbf{only from participants where the survey status was marked "complete" or "partial complete"}. Thus, for all proceeding questions the N = 922 (i.e., all proportions can be multiplied by 922 to obtain the counts for each question).
 
-Sections are broken down into the various survey subject areas: general living, academic life, sleeping and eating habits, mental well-being, sexual violece, and campus resources. The last column is always ``NA," which is the proportion of people who did not answer the question from the pool of people who answered at least one question.
+Sections are broken down into the various survey subject areas: general living, academic life, sleeping and eating habits, mental well-being, sexual violence, and campus resources. The last column is always ``NA," which is the proportion of people who did not answer the question from the pool of people who answered at least one question.
 
 <<echo = FALSE>>=
 #Function to make table
@@ -283,7 +277,7 @@ maketable(dataframe = cresources, maxnum = 5, options = c("Very poor/Strongly di
 
 \section{Inference}
 
-The following tables denote, for each of the above sections, whether or not there is an association between ethnicity, gender, sexual orientation, or living status versus all of the questions in the previous sections. $\chi^2$ tests were done to assess significance of associations at the $\alpha = 0.05$ level. For example, in the table immediately below, there is an asterisk at ``I am confident about my financial situation" and "Ethnicity." This means there is a significant association between satisfaction of living conditions and ethicity. All p-values were adjusted for multiple comparisons using the bonferroni correction.
+The following tables denote, for each of the above sections, whether or not there is an association between ethnicity, gender, sexual orientation, or living status versus all of the questions in the previous sections. $\chi^2$ tests were done to assess significance of associations at the $\alpha = 0.05$ level. For example, in the table immediately below, there is an asterisk at ``I am confident about my financial situation" and "Ethnicity." This means there is a significant association between satisfaction of living conditions and ethnicity. All p-values were adjusted for multiple comparisons using the bonferroni correction.
 
 <<results = 'asis', warning = FALSE, echo = FALSE>>=
 compare_vars = MH[,c("ethn_shtdesc", "g01", "g02", "g03")]
