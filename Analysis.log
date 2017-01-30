@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  18 DEC 2016 18:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 JAN 2017 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -329,27 +329,1862 @@ Overfull \hbox (16.19847pt too wide) in paragraph at lines 415--416
 
 LaTeX Warning: Float too large for page by 90.49385pt on input line 824.
 
-[14] [15] [16] (./Analysis.aux) ) 
+[14] <figure/unnamed-chunk-18-1.pdf, id=54, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-1.pdf used on input line 832.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.835 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (115.09447pt too wide) in paragraph at lines 832--835
+[] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+
+Overfull \vbox (316.92438pt too high) has occurred while \output is active []
+
+
+[15 <./figure/unnamed-chunk-18-1.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.838 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.841 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.844 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-2.pdf, id=63, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-2.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-2.pdf used on input line 846.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.849 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 846--849
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[16]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.852 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.855 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.858 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-3.pdf, id=67, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-3.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-3.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-3.pdf used on input line 860.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.863 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 860--863
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[17 <./figure/unnamed-chunk-18-2.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.866 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.869 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.872 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-4.pdf, id=76, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-4.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-4.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-4.pdf used on input line 874.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.877 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 874--877
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[18 <./figure/unnamed-chunk-18-3.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.880 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.883 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.886 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-5.pdf, id=85, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-5.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-5.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-5.pdf used on input line 888.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.891 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 888--891
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[19 <./figure/unnamed-chunk-18-4.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.894 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.897 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.900 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-6.pdf, id=95, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-6.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-6.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-6.pdf used on input line 902.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.905 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 902--905
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[20 <./figure/unnamed-chunk-18-5.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.908 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.911 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.914 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-7.pdf, id=104, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-7.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-7.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-7.pdf used on input line 916.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.919 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 916--919
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[21 <./figure/unnamed-chunk-18-6.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.922 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.925 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.928 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-8.pdf, id=113, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-8.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-8.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-8.pdf used on input line 930.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.933 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 930--933
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[22 <./figure/unnamed-chunk-18-7.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.936 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.939 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.942 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-9.pdf, id=122, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-9.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-9.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-9.pdf used on input line 944.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.947 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 944--947
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[23 <./figure/unnamed-chunk-18-8.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.950 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.953 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.956 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-10.pdf, id=131, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-10.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-10.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-10.pdf used on input line 958.
+
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.961 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (130.09447pt too wide) in paragraph at lines 958--961
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]123456789101112131415$ 
+ []
+
+[24 <./figure/unnamed-chunk-18-9.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.964 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.967 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.970 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-11.pdf, id=140, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-11.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-11.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-11.pdf used on input line 972.
+
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.975 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 972--975
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[25 <./figure/unnamed-chunk-18-10.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.978 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.981 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.984 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-12.pdf, id=150, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-12.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-12.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-12.pdf used on input line 986.
+
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.989 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 986--989
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[26 <./figure/unnamed-chunk-18-11.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.992 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.995 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.998 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-13.pdf, id=159, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-13.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-13.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-13.pdf used on input line 1000
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1003 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 1000--1003
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[27 <./figure/unnamed-chunk-18-12.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1006 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1009 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1012 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-14.pdf, id=169, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-14.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-14.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-14.pdf used on input line 1014
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1017 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 1014--1017
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[28 <./figure/unnamed-chunk-18-13.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1020 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1023 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1026 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-15.pdf, id=178, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-15.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-15.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-15.pdf used on input line 1028
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1031 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 1028--1031
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[29 <./figure/unnamed-chunk-18-14.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1034 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1037 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1040 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-16.pdf, id=187, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-16.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-16.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-16.pdf used on input line 1042
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1045 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 1042--1045
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[30 <./figure/unnamed-chunk-18-15.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1048 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1051 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1054 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-17.pdf, id=196, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-17.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-17.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-17.pdf used on input line 1056
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1059 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 1056--1059
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[31 <./figure/unnamed-chunk-18-16.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1062 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1065 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1068 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-18.pdf, id=206, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-18.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-18.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-18.pdf used on input line 1070
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1073 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 1070--1073
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[32 <./figure/unnamed-chunk-18-17.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1076 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1079 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1082 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-19.pdf, id=215, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-19.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-19.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-19.pdf used on input line 1084
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1087 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 1084--1087
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[33 <./figure/unnamed-chunk-18-18.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1090 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1093 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1096 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-20.pdf, id=224, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-20.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-20.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-20.pdf used on input line 1098
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1101 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (35.09418pt too wide) in paragraph at lines 1098--1101
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12$ 
+ []
+
+[34 <./figure/unnamed-chunk-18-19.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1104 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1107 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1110 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-21.pdf, id=233, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-21.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-21.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-21.pdf used on input line 1147
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1150 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1147--1150
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[35 <./figure/unnamed-chunk-18-20.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1153 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1156 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1159 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-22.pdf, id=242, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-22.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-22.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-22.pdf used on input line 1186
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1189 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1186--1189
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[36 <./figure/unnamed-chunk-18-21.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1192 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1195 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1198 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-23.pdf, id=251, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-23.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-23.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-23.pdf used on input line 1230
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1233 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1230--1233
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[37 <./figure/unnamed-chunk-18-22.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1236 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1239 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1242 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-24.pdf, id=261, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-24.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-24.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-24.pdf used on input line 1259
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1262 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1259--1262
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[38 <./figure/unnamed-chunk-18-23.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1265 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1268 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1271 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-25.pdf, id=270, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-25.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-25.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-25.pdf used on input line 1313
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1316 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1313--1316
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[39 <./figure/unnamed-chunk-18-24.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1319 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1322 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1325 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-26.pdf, id=279, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-26.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-26.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-26.pdf used on input line 1377
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1380 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1377--1380
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[40 <./figure/unnamed-chunk-18-25.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1386 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1389 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-27.pdf, id=288, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-27.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-27.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-27.pdf used on input line 1441
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1444 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1441--1444
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[41 <./figure/unnamed-chunk-18-26.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1447 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1450 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1453 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-28.pdf, id=297, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-28.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-28.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-28.pdf used on input line 1480
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1483 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1480--1483
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[42 <./figure/unnamed-chunk-18-27.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1486 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1489 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1492 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-29.pdf, id=306, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-29.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-29.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-29.pdf used on input line 1539
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1542 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1539--1542
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[43 <./figure/unnamed-chunk-18-28.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1545 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1548 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1551 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-30.pdf, id=316, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-30.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-30.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-30.pdf used on input line 1588
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1591 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.09422pt too wide) in paragraph at lines 1588--1591
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]12345$ 
+ []
+
+[44 <./figure/unnamed-chunk-18-29.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1594 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1597 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1600 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-31.pdf, id=326, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-31.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-31.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-31.pdf used on input line 1630
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1633 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1630--1633
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[45 <./figure/unnamed-chunk-18-30.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1636 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1639 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1642 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-32.pdf, id=335, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-32.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-32.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-32.pdf used on input line 1664
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1667 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1664--1667
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[46 <./figure/unnamed-chunk-18-31.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1670 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1673 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1676 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-33.pdf, id=344, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-33.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-33.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-33.pdf used on input line 1702
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1705 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1702--1705
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[47 <./figure/unnamed-chunk-18-32.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1708 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1711 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1714 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-34.pdf, id=353, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-34.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-34.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-34.pdf used on input line 1728
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1731 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1728--1731
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[48 <./figure/unnamed-chunk-18-33.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1734 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1737 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1740 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-35.pdf, id=362, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-35.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-35.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-35.pdf used on input line 1774
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1777 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1774--1777
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[49 <./figure/unnamed-chunk-18-34.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1780 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1783 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1786 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-36.pdf, id=372, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-36.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-36.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-36.pdf used on input line 1828
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1831 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1828--1831
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[50 <./figure/unnamed-chunk-18-35.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1834 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1837 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1840 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-37.pdf, id=381, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-37.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-37.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-37.pdf used on input line 1882
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1885 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1882--1885
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[51 <./figure/unnamed-chunk-18-36.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1888 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1891 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1894 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-38.pdf, id=390, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-38.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-38.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-38.pdf used on input line 1916
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1919 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1916--1919
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[52 <./figure/unnamed-chunk-18-37.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1922 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1925 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1928 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-39.pdf, id=399, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-39.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-39.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-39.pdf used on input line 1966
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1969 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 1966--1969
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[53 <./figure/unnamed-chunk-18-38.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1972 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1975 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1978 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+<figure/unnamed-chunk-18-40.pdf, id=408, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-40.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-40.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-40.pdf used on input line 2008
+.
+(pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2011 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (45.09421pt too wide) in paragraph at lines 2008--2011
+[][] $\OML/cmm/m/it/10 rowInd\OT1/cmr/m/n/10 [1]1234$ 
+ []
+
+[54 <./figure/unnamed-chunk-18-39.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2014 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2017 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2020 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[55 <./figure/unnamed-chunk-18-40.pdf>] [56] (./Analysis.aux) ) 
 Here is how much of TeX's memory you used:
- 2886 strings out of 493014
- 39861 string characters out of 6133351
+ 3088 strings out of 493014
+ 46307 string characters out of 6133351
  205874 words of memory out of 5000000
- 6380 multiletter control sequences out of 15000+600000
+ 6540 multiletter control sequences out of 15000+600000
  9023 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,12n,23p,647b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb>
-Output written on Analysis.pdf (16 pages, 120437 bytes).
+</usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on Analysis.pdf (56 pages, 291321 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 456 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
