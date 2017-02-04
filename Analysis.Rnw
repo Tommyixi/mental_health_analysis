@@ -277,10 +277,7 @@ maketable(dataframe = cresources, maxnum = 5, options = c("Very poor/Strongly di
 
 \pagebreak
 
-
-
 \section{Inference}
-
 The following tables denote, for each of the above sections, whether or not there is an association between ethnicity, gender, sexual orientation, or living status versus all of the questions in the previous sections. $\chi^2$ tests were done to assess significance of associations at the $\alpha = 0.05$ level. For example, in the table immediately below, there is an asterisk at ``I am confident about my financial situation" and "Ethnicity." This means there is a significant association between satisfaction of living conditions and ethnicity. All p-values were adjusted for multiple comparisons using the bonferroni correction.
 
 <<results = 'asis', warning = FALSE, echo = FALSE>>=
@@ -322,7 +319,6 @@ chi_table(cresources, scalebox = 0.75, caption = "Table of p-values and signific
 \pagebreak
 
 \section{Additional Inference}
-
 This section displays two heatmaps to identify possible trends in the data. 
 
 <<results = 'asis', warning = FALSE, echo = F>>=
