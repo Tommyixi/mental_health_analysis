@@ -19,12 +19,11 @@
 The following section compares the ethnic diversity of the Fall 2016 undergraduates at the University of California, Berkeley (UCB) with the profile of survey participants who completed the ``Undergraduate Student Well-being Survey - 2016" (USWBS), as populated by the UCB.
 \subsection{UC Berkeley Demographics}
 
-<<echo = FALSE, results = 'asis'>>=
+<<echo = FALSE, results = 'asis', warning = FALSE, message = FALSE>>=
 library(xtable)
 library(knitr)
 library(gplots)
 library(RColorBrewer)
-
 MH = read.csv("Data/data.csv")
 MH[,grep(pattern = "text$", names(MH))] = NULL
 MH = MH[MH$status == 1 | MH$status == 2,]
@@ -76,7 +75,7 @@ Using an $\alpha$ level of .05, we observe that the population of Fall 2016 unde
 
 \pagebreak
 \section{Descriptive statistics}
-The following section provides a breakdown of each of the questions asked and how participants responded. The following proportions were derived \textbf{only from participants where the survey status was marked "complete" or "partial complete"}. Thus, for all proceeding questions the N = 922 (i.e., all proportions can be multiplied by 922 to obtain the counts for each question).
+The following section provides a breakdown of each of the questions asked and how participants responded. The following proportions were derived \textbf{only from participants where the survey status was marked ``complete" or ``partial complete"}. Thus, for all proceeding questions the N = 922 (i.e., all proportions can be multiplied by 922 to obtain the counts for each question).
 
 Sections are broken down into the various survey subject areas: general living, academic life, sleeping and eating habits, mental well-being, sexual violence, and campus resources. The last column is always ``NA," which is the proportion of people who did not answer the question from the pool of people who answered at least one question.
 
@@ -321,7 +320,7 @@ chi_table(cresources, scalebox = 0.75, caption = "Table of p-values and signific
 \section{Additional Inference}
 This section displays two heatmaps to identify possible trends in the data. 
 
-<<results = 'asis', warning = FALSE, echo = F>>=
+<<results = 'asis', warning = FALSE, echo = F, fig.align=TRUE>>=
 
 right_side_ethn <- c(paste(unique(MH$ethn_shtdesc)))
 right_side_gender <-c(paste(unique(MH$gender)))
@@ -449,7 +448,7 @@ create_heatmap_total = function(created_matrix){
     }    
   }
   rownames(created_matrix) <- c("White", "Other Hispanic/Latino","African American/Black", "Native American/Alaska Native","Mexican American/Chicano", "Korean", "Filipino", "South Asian", "Japanese", "International", "Decline to State", "Pacific Islander", "Chinese", "Vietnamese", "Other Asian", "Male", "Female", "Slightly Agree MH Rating", "Disagree MH Rating", "Neither Agree nor Disagree MH Rating", "Slightly Disagree MH Rating", "Strongly Disagree MH Rating", "Heterosexual", "Gay or lesbian", "Bisexual/Pansexual", "Other")
-  heatmap.2(as.matrix(created_matrix), cellnote = created_matrix, density.info="none",trace="none", notecol="black", dendrogram="none", Colv=FALSE, Rowv= FALSE )
+  heatmap.2(as.matrix(created_matrix), cellnote = created_matrix, density.info="none",trace="none", notecol="black", dendrogram="none", Colv=FALSE, Rowv= FALSE, margins = c(12,18) )
 }
 
 create_heatmap_total(generate_total_matrix(bottom_side_total_1))
@@ -502,5 +501,30 @@ create_heatmap_total(generate_total_matrix(bottom_side_total_2))
 
 
 @
+
+Of people who are mentally distress, how many people are utilizing services - D08, B01, B03 (get percentages for each category) (F01 through F07)
+<<echo = FALSE, results = 'asis'>>=
+sub_cresources = cresources[,1:7]
+sub_mental = mental[,1:10]
+
+table_strata = function(x, y) {
+
+        tab = table(sub_mental[,x], sub_cresources[,y],
+              dnn = list(colnames(sub_mental)[x], colnames(sub_cresources)[y]))
+        colnames(tab) = c("I have not heard about until now", "I have heard about but have not used", "I have used this service")
+        rownames(tab) = c("Rarely or none of the time", "Some or a little of the time", "Occasionally or a moderate amount of time", "Most or all of the time")
+
+#        addtorow = list()
+#        addtorow$pos = list(0,0)
+#        addtorow$command = c(paste0("& \\multicolumn{", ncol(tab), "}{c}{", names(dimnames(tab)[1]), "} \\\\ \n"), paste0(names(dimnames(tab)[2]), paste0(paste("&", colnames(tab)), collapse = " "), "\\\\ \n"))
+#        return(print(xtable(tab, digits = 3), add.to.row = addtorow, include.colnames = FALSE) )
+        return(print(xtable(tab, digits = 3), rotate.colnames = TRUE, scalebox = .7, table.placement = "H"))
+
+}
+
+lapply(1:7, function(y) lapply(1:10, table_strata, y))
+
+@
+
 
 \end{document}
