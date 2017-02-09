@@ -324,10 +324,9 @@ This section displays two heatmaps to identify possible trends in the data.
 
 right_side_ethn <- c(paste(unique(MH$ethn_shtdesc)))
 right_side_gender <-c(paste(unique(MH$gender)))
-right_side_mhealth <- head(c(paste(unique(MH$a06))), -1)
 right_side_sexuality <- head(sort(c(paste(unique(MH$g02)))),-1)
 
-right_side_total <- c(right_side_ethn, right_side_gender, right_side_mhealth, right_side_sexuality)
+right_side_total <- c(right_side_ethn, right_side_gender, right_side_sexuality)
 
 bottom_side_a1 <- grep("^a0([1-4]|[7-9])",colnames(MH))
 bottom_side_a2 <- grep("(^a0([5-6])|^a1([0-2]))",colnames(MH))
@@ -377,23 +376,6 @@ create_heatmap_gender = function(created_matrix){
 #print(heatmap(created_matrix, Rowv=NA, Colv=NA, scale = "none", col = cm.colors(256), margins=c(6,6)))  
 }
 
-generate_mhealth_matrix = function(col_cat){
-  map_table <- matrix(ncol=length(col_cat), nrow=length(right_side_mhealth))
-  rownames(map_table) <-right_side_mhealth
-  colnames(map_table) <- sapply(col_cat,function(name) colnames(MH)[name] )
-  return(map_table)
-}
-
-create_heatmap_mhealth = function(created_matrix){
-  for(row in 1:nrow(created_matrix)) {
-    for(col in 1:ncol(created_matrix)) {
-      created_matrix[row,col] = round(mean(get(colnames(created_matrix)[col],MH)[MH$a06==rownames(created_matrix)[row]], na.rm=TRUE), digits = 2)
-    }
-  }
-  rownames(created_matrix) <- c("Slightly Agree MH Rating", "Disagree MH Rating", "Neither Agree nor Disagree MH Rating", "Slightly Disagree MH Rating", "Strongly Disagree MH Rating")
-  heatmap.2(created_matrix, cellnote = created_matrix, density.info="none",trace="none", notecol="black", dendrogram="none")  
-}
-
 generate_sexuality_matrix = function(col_cat){
   map_table <- matrix(ncol=length(col_cat), nrow=length(right_side_sexuality))
   rownames(map_table) <-right_side_sexuality
@@ -434,20 +416,14 @@ create_heatmap_total = function(created_matrix){
       }
     counter <- counter + 1 
     }
-    if((counter <= (length(right_side_ethn) + length(right_side_gender) + length(right_side_mhealth)) && counter > length(right_side_ethn) + length(right_side_gender)) ){
-      for(col in 1:ncol(created_matrix)) {
-        created_matrix[counter,col] = round(mean(get(colnames(created_matrix)[col],MH)[MH$a06==rownames(created_matrix)[counter]], na.rm=TRUE), digits = 2)
-      }
-    counter <- counter + 1    
-    }      
-    if((counter <= (length(right_side_ethn) + length(right_side_gender) + length(right_side_mhealth) + length(right_side_sexuality)) && counter > length(right_side_ethn) + length(right_side_gender) + length(right_side_mhealth)) ){
+    if((counter <= (length(right_side_ethn) + length(right_side_gender) + length(right_side_sexuality)) && counter > length(right_side_ethn) + length(right_side_gender)) ){
       for(col in 1:ncol(created_matrix)) {
         created_matrix[counter,col] = round(mean(get(colnames(created_matrix)[col],MH)[MH$g02==rownames(created_matrix)[counter]], na.rm=TRUE), digits = 2)
       }
     counter <- counter + 1 
     }    
   }
-  rownames(created_matrix) <- c("White", "Other Hispanic/Latino","African American/Black", "Native American/Alaska Native","Mexican American/Chicano", "Korean", "Filipino", "South Asian", "Japanese", "International", "Decline to State", "Pacific Islander", "Chinese", "Vietnamese", "Other Asian", "Male", "Female", "Slightly Agree MH Rating", "Disagree MH Rating", "Neither Agree nor Disagree MH Rating", "Slightly Disagree MH Rating", "Strongly Disagree MH Rating", "Heterosexual", "Gay or lesbian", "Bisexual/Pansexual", "Other")
+  rownames(created_matrix) <- c("White(n=156)", "Other Hispanic/Latino(n=84)","African American/Black(n=93)", "Native American/Alaska Native(n=25)","Mexican American/Chicano(n=267)", "Korean(n=21)", "Filipino(n=15)", "South Asian(n=33)", "Japanese(n=9)", "International(n=40)", "Decline to State(n=24)", "Pacific Islander(n=7)", "Chinese(n=115)", "Vietnamese(n=23)", "Other Asian(n=10)", "Male(n=337)", "Female(n=585)", "Heterosexual(n=665)", "Gay or lesbian(n=39)", "Bisexual/Pansexual(n=84)", "Other(n=20)")
   heatmap.2(as.matrix(created_matrix), cellnote = created_matrix, density.info="none",trace="none", notecol="black", dendrogram="none", Colv=FALSE, Rowv= FALSE, margins = c(12,18) )
 }
 
@@ -476,17 +452,6 @@ create_heatmap_total(generate_total_matrix(bottom_side_total_2))
 #create_heatmap_gender(generate_gender_matrix(bottom_side_e1))
 #create_heatmap_gender(generate_gender_matrix(bottom_side_e2))
 #create_heatmap_gender(generate_gender_matrix(bottom_side_f1))
-
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_a1))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_a2))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_b1))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_b2))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_c1))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_c2))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_d1))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_e1))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_e2))
-#create_heatmap_mhealth(generate_mhealth_matrix(bottom_side_f1))
 
 #create_heatmap_sexuality(generate_sexuality_matrix(bottom_side_a1))
 #create_heatmap_sexuality(generate_sexuality_matrix(bottom_side_a2))
