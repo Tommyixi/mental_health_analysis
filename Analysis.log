@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  8 FEB 2017 20:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 FEB 2017 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -178,6 +178,9 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box30
 \rot@mess@toks=\toks23
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -185,18 +188,18 @@ tim
 (./Analysis.aux)
 \openout1 = `Analysis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -297,17 +300,17 @@ e
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4] [5]
-Overfull \hbox (19.39284pt too wide) in paragraph at lines 247--248
+Overfull \hbox (19.39284pt too wide) in paragraph at lines 248--249
  [][] 
  []
 
 
-Overfull \hbox (1.89265pt too wide) in paragraph at lines 263--264
+Overfull \hbox (1.89265pt too wide) in paragraph at lines 264--265
  [][] 
  []
 
 [6]
-Overfull \hbox (17.61497pt too wide) in paragraph at lines 314--315
+Overfull \hbox (17.61497pt too wide) in paragraph at lines 315--316
  [][] 
  []
 
@@ -316,59 +319,59 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Overfull \hbox (18.08719pt too wide) in paragraph at lines 360--361
+Overfull \hbox (13.08719pt too wide) in paragraph at lines 361--362
  [][] 
  []
 
 [8]
-Overfull \hbox (16.19847pt too wide) in paragraph at lines 415--416
+Overfull \hbox (16.19847pt too wide) in paragraph at lines 416--417
  [][] 
  []
 
 [9] [10] [11] [12] [13]
 
-LaTeX Warning: Float too large for page by 90.49385pt on input line 823.
+LaTeX Warning: Float too large for page by 90.49385pt on input line 824.
 
-[14] <figure/unnamed-chunk-18-1.pdf, id=54, 505.89pt x 505.89pt>
+[14] [15] [16] <figure/unnamed-chunk-18-1.pdf, id=60, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-18-1.pdf Graphic file (type pdf)
 
 <use figure/unnamed-chunk-18-1.pdf>
 Package pdftex.def Info: figure/unnamed-chunk-18-1.pdf used on input line 833.
 (pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
 
-<figure/unnamed-chunk-18-2.pdf, id=55, 505.89pt x 505.89pt> [15]
-Overfull \vbox (101.91158pt too high) has occurred while \output is active []
-
-
-[16 <./figure/unnamed-chunk-18-1.pdf>]
+<figure/unnamed-chunk-18-2.pdf, id=61, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-18-2.pdf Graphic file (type pdf)
- <use figure/unnamed-chunk-18-2.pdf>
+
+<use figure/unnamed-chunk-18-2.pdf>
 Package pdftex.def Info: figure/unnamed-chunk-18-2.pdf used on input line 838.
 (pdftex.def)             Requested size: 505.88875pt x 505.89645pt.
+ [17
 
-[17 <./figure/unnamed-chunk-18-2.pdf>] [18] [19] [20] [21] [22] [23] [24]
-[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
-[40] [41] [42] [43] (./Analysis.aux) ) 
+ <./figure/unnamed-chunk-18-1.pdf>]
+[18 <./figure/unnamed-chunk-18-2.pdf>] [19] [20] [21] [22
+
+] [23] [24]
+(./Analysis.aux) ) 
 Here is how much of TeX's memory you used:
- 2898 strings out of 493014
- 40186 string characters out of 6133351
- 205874 words of memory out of 5000000
- 6388 multiletter control sequences out of 15000+600000
+ 2914 strings out of 493014
+ 40525 string characters out of 6133351
+ 205911 words of memory out of 5000000
+ 6400 multiletter control sequences out of 15000+600000
  9023 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,12n,23p,701b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb>
-Output written on Analysis.pdf (43 pages, 164758 bytes).
+ 38i,12n,23p,647b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb>
+Output written on Analysis.pdf (24 pages, 151704 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
+ 123 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
