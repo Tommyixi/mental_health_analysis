@@ -148,7 +148,7 @@ wellness of the undergraduate population and shape what the campus can do to
 address it."
 <<echo = FALSE, results = 'asis'>>=
 mental = MH[,grep("^d", names(MH))]
-names(mental) = paste(names(mental), c("Past week: I felt depressed", "Past week: I felt hopeful about the future", "Past week: I felt happy with my life", "Past week: I felt alone and isolated", "Past week: I felt like it was hard to \``get up \" from lack of energy & motivation", "	Past week: I felt less interested in things I usually enjoy", "	Past week: I felt upset about the way my life was heading", "Past week: I felt like utilizing campus resources for mental distress", "Past week: I felt like a bad person", "Past week: I found it hard to focus on the positive aspects of life", "	In the past month I felt like utilizing campus resources for mental distress", "	Ever diagnosed with depression by a clinical professional"))
+names(mental) = paste(names(mental), c("Past week: I felt depressed", "Past week: I felt hopeful about the future", "Past week: I felt happy with my life", "Past week: I felt alone and isolated", "Past week: I felt like it was hard to get up from lack of energy and motivation", "	Past week: I felt less interested in things I usually enjoy", "	Past week: I felt upset about the way my life was heading", "Past week: I felt like utilizing campus resources for mental distress", "Past week: I felt like a bad person", "Past week: I found it hard to focus on the positive aspects of life", "	In the past month I felt like utilizing campus resources for mental distress", "	Ever diagnosed with depression by a clinical professional"))
 
 maketable(dataframe = mental, maxnum = 3, options = c("Rarely or none of the time", "Some or a little of the time", "Occasionally or a moderate amount of the time", "All of the time", "NA"))
 
@@ -189,11 +189,11 @@ questions are about your knowledge and awareness of different campus-related
 mental health resources." 
 <<echo = FALSE, results = 'asis'>>=
 cresources = MH[,grep("^f", names(MH))]
-names(cresources) = paste(names(cresources),c("UHS at the Tang Center: Counseling & Psychological Services",
+names(cresources) = paste(names(cresources),c("UHS at the Tang Center: Counseling and Psychological Services",
                       "Tang Center CPS Satellite Counseling Services on campus",
                       "Nap spaces on campus",
-                      "Peer Health Workers for IFC, PHC, Housing, Co-Op residents",
-                      "Student-to-Student Peer Counseling",
+                      "Peer Health Workers for IFC, PHC, Housing, CoOp residents",
+                      "Student to Student Peer Counseling",
                       "Tang Center Health Coaching",
                       "Confidential Care Advocates",
                       "How hear about: CPS - A friend",
@@ -502,7 +502,7 @@ create_heatmap_total(generate_total_matrix(bottom_side_total_2))
 
 @
 
-Of people who are mentally distress, how many people are utilizing services - D08, B01, B03 (get percentages for each category) (F01 through F07)
+\section{Mental health vs. who utilizes services}
 <<echo = FALSE, results = 'asis'>>=
 sub_cresources = cresources[,1:7]
 sub_mental = mental[,1:10]
@@ -514,17 +514,34 @@ table_strata = function(x, y) {
         colnames(tab) = c("I have not heard about until now", "I have heard about but have not used", "I have used this service")
         rownames(tab) = c("Rarely or none of the time", "Some or a little of the time", "Occasionally or a moderate amount of time", "Most or all of the time")
 
-#        addtorow = list()
-#        addtorow$pos = list(0,0)
-#        addtorow$command = c(paste0("& \\multicolumn{", ncol(tab), "}{c}{", names(dimnames(tab)[1]), "} \\\\ \n"), paste0(names(dimnames(tab)[2]), paste0(paste("&", colnames(tab)), collapse = " "), "\\\\ \n"))
-#        return(print(xtable(tab, digits = 3), add.to.row = addtorow, include.colnames = FALSE) )
-        return(print(xtable(tab, digits = 3), rotate.colnames = TRUE, scalebox = .7, table.placement = "H"))
+        addtorow = list()
+        addtorow$pos = list(0,0)
+        addtorow$command = c(paste0("& \\multicolumn{", ncol(tab), "}{c}{", names(dimnames(tab)[2]), "} \\\\ \n"), paste0(names(dimnames(tab)[1]), paste0(paste("&", colnames(tab)), collapse = " "), "\\\\ \n"))
+        return(print(xtable(tab, digits = 3), scalebox = .7, add.to.row = addtorow, include.colnames = FALSE) )
+#        return(print(xtable(tab, digits = 3), rotate.colnames = TRUE, scalebox = .7, table.placement = #"H"))
 
 }
 
-lapply(1:7, function(y) lapply(1:10, table_strata, y))
+
+
+ for (i in 1:4) {
+   for (j in 1:4) {
+     table_strata(j,i)
+   }
+ }
+@
+
+\clearpage
+<<echo = FALSE, results = 'asis'>>=
+
+ for (i in 5:7) {
+   for (j in 5:10) {
+     table_strata(j,i)
+   }
+ }
 
 @
+
 
 
 \end{document}
