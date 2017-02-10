@@ -482,7 +482,7 @@ table_strata = function(x, y) {
         addtorow = list()
         addtorow$pos = list(0,0)
         addtorow$command = c(paste0("& \\multicolumn{", ncol(tab), "}{c}{", names(dimnames(tab)[2]), "} \\\\ \n"), paste0(names(dimnames(tab)[1]), paste0(paste("&", colnames(tab)), collapse = " "), "\\\\ \n"))
-        return(print(xtable(tab, digits = 3), scalebox = .7, add.to.row = addtorow, include.colnames = FALSE) )
+        return(print(xtable(tab, digits = 3), scalebox = .65, add.to.row = addtorow, include.colnames = FALSE) )
 #        return(print(xtable(tab, digits = 3), rotate.colnames = TRUE, scalebox = .7, table.placement = #"H"))
 
 }
