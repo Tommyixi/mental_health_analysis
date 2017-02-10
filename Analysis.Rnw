@@ -8,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage[top=1in, bottom=1.5in, left=.5in, right=.5in]{geometry}
 \usepackage{rotating} 
+\usepackage[section]{placeins}
 
 \begin{document}
 \maketitle
