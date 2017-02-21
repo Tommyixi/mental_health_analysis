@@ -11,4 +11,4 @@
 \contentsline {subsection}{\numberline {2.6}Campus Resources}{11}
 \contentsline {section}{\numberline {3}Inference}{14}
 \contentsline {section}{\numberline {4}Additional Inference}{17}
-\contentsline {section}{\numberline {5}Mental health vs. who utilizes services}{18}
+\contentsline {section}{\numberline {5}Mental health vs. who utilizes services}{21}
